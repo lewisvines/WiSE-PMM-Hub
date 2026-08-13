@@ -136,9 +136,60 @@ research takeaways worth keeping beyond the update feed. One entry per insight,
 tagged, sourced, attributed via `addedBy`. Quotes must already be approved for
 internal use.
 
+### `data/actions.json` (meeting actions onto individual trackers)
+From every meeting transcript (and Teams/email when a clear commitment is made),
+extract action items and append them here. Rules:
+- **Explicit commitments only** — someone clearly agreed to do a specific thing.
+  Vague intentions ("we should look at...") are not actions.
+- The owner must be unambiguous; if not, put it in `needsHuman` instead.
+- Record `due` only when a date was actually stated or clearly implied.
+- One entry per action: `{id: a-YYYYMMDD-nn, date, owner, action, due?, status:
+  "open", source, sourceRef, addedBy, linkedGoal?}`. Link a goal/milestone when
+  the connection is obvious.
+- Mark `done` or `dropped` only when the owner says so or the evidence is
+  unambiguous (the deliverable visibly shipped).
+- Actions appear on each owner's tracker in My View — they are team-visible.
+
+### Country dependencies & stakeholder map
+- `dependencies` per country: update `status` (on-track | at-risk | blocked)
+  when sourced signals show movement; add a dependency when a market is clearly
+  waiting on another team; explain every status change in an update.
+- Stakeholder `influence` and `relationship` fields are human-judgement calls —
+  never change them yourself; flag suspected changes via `needsHuman`.
+
 ### Decision SLAs
 When logging a pending decision, set `neededBy` whenever the source states or
 implies a deadline. If none is stated, ask in `needsHuman` rather than guessing.
+
+
+### `data/roadmap.json` — the 18-month roadmap
+
+This is the team's accountability view, so accuracy matters more than coverage.
+
+**You may update, on sourced evidence only:**
+
+- `status` — move an initiative between planned / on-track / at-risk / blocked /
+  done when a meeting, thread or roadmap doc clearly says so.
+- `progress` — only against a concrete signal (a deliverable shipped, a stage
+  passed). Never estimate from elapsed time.
+- `progressNote` — one or two sentences of "where we are up to", written plainly.
+- `nextSteps` — add steps that were explicitly committed to; mark `done: true`
+  when someone states they are complete. Do not invent steps.
+- `lastReviewed` / `reviewedBy` — stamp whenever you change any of the above,
+  using the date of the source and the person whose signal it came from.
+
+**You may not:**
+
+- change `start` or `end` without an explicit dated commitment in the source —
+  a slipping date is a decision, not an inference. If a date looks wrong, raise
+  it in `needsHuman` on your digest instead.
+- add or delete initiatives. New initiatives arrive from humans via the
+  "[roadmap] Add initiative" issue; fold those in, then close the issue with a
+  comment naming the id you created.
+- reorder `rows` or edit `statusLegend`.
+
+An initiative that has had no sourced signal for 30 days should be listed in
+your digest's `needsHuman` as "roadmap review due" rather than silently ageing.
 
 ### `data/digests.json`
 Every run appends exactly one entry — even a run that wrote nothing else
