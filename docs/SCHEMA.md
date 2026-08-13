@@ -158,7 +158,8 @@ forward on its own — no yearly rebuild.
 | Field | Type | Notes |
 |---|---|---|
 | `fiscalYearStartMonth` | int | 10 for Sage (FY starts in October) |
-| `quartersShown` | int | 6 = 18 months |
+| `monthsShown` | int | How many months are drawn individually (6) |
+| `quartersAfter` | int | Fiscal quarters drawn after the month block (4) |
 | `rows` | string[] | Swimlane order: `wise` (programme-wide) plus country ids |
 | `rowLabels` | object | Optional display names for non-country rows |
 | `statusLegend` | object | status → plain-English meaning, rendered as the legend |
@@ -171,6 +172,12 @@ diamond), `status` (`planned` | `on-track` | `at-risk` | `blocked` | `done`),
 are up to"), `nextSteps[]` (`{text, done}` — "what needs to be done"),
 `lastReviewed` (YYYY-MM-DD), `reviewedBy` (person id), and optional
 `linkedGoal` / `linkedChallenge`.
+
+`events[]`: fixed industry dates drawn in the Key events band — `id`, `row`,
+`name`, `start`, optional `end`, `location`, `why` (why it matters to WiSE) and
+`source` (where the date came from, and whether it is verified or sample).
+Events are human-maintained: agents may flag a date change they have seen, but
+never add, move or remove an event themselves.
 
 Bars past their `end` date that aren't `done` are outlined as overdue by the
 dashboard — that flag is derived, never stored.
