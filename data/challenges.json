@@ -1,0 +1,61 @@
+{
+  "_comment": "SAMPLE DATA — live risks and blockers. Each challenge maps to a GitHub Issue (issueNumber) where discussion happens. severity: low | medium | high | critical. status: open | mitigating | resolved. Optional `country`: country id when the challenge is market-specific — the dashboard links it to that country page.",
+  "challenges": [
+    {
+      "id": "c1",
+      "title": "First-call deck adoption lagging",
+      "severity": "medium",
+      "status": "mitigating",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "raised": "2026-07-22",
+      "summary": "Only 30% of sellers using the new deck; older materials still circulating. Mitigation: enablement push plus deprecating old assets in the content library.",
+      "issueNumber": 3,
+      "lastUpdate": "2026-08-01",
+      "relatedGoal": "o2-kr2",
+      "country": null
+    },
+    {
+      "id": "c2",
+      "title": "Launch budget envelope unconfirmed",
+      "severity": "high",
+      "status": "open",
+      "owner": "diego",
+      "workstream": "strategy-alignment",
+      "raised": "2026-07-28",
+      "summary": "Finance may phase spend across Q4/Q1, which would constrain tier-1 launch activities. Decision needed at Thursday budget review.",
+      "issueNumber": 5,
+      "lastUpdate": "2026-08-02",
+      "relatedGoal": "o1",
+      "country": null
+    },
+    {
+      "id": "c3",
+      "title": "Enablement platform migration slip",
+      "severity": "high",
+      "status": "open",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "raised": "2026-08-01",
+      "summary": "L&D platform migration delayed two weeks — enablement path go-live (m3, 21 Aug) at risk. Options: interim delivery via Teams live sessions, or shift milestone.",
+      "issueNumber": 7,
+      "lastUpdate": "2026-08-03",
+      "relatedGoal": "m3",
+      "country": "uki"
+    },
+    {
+      "id": "c4",
+      "title": "Win/loss interview scheduling",
+      "severity": "low",
+      "status": "mitigating",
+      "owner": "anais",
+      "workstream": "intel-insights",
+      "raised": "2026-07-18",
+      "summary": "Customer contacts slow to respond over summer holidays. Mitigation: widened outreach pool and added incentive voucher.",
+      "issueNumber": 2,
+      "lastUpdate": "2026-07-30",
+      "relatedGoal": "o3-kr3",
+      "country": "fr"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "hubName": "WiSE PMM Hub",
+  "tagline": "One always-current source of truth for the WiSE product marketing team",
+  "org": "lewisvines",
+  "repo": "WiSE-PMM-Hub",
+  "repoUrl": "https://github.com/lewisvines/WiSE-PMM-Hub",
+  "quarterLabel": "Q4 FY26 (Jul–Sep 2026)",
+  "timezone": "Europe/London",
+  "digestSchedule": [
+    "08:00",
+    "16:00"
+  ],
+  "lastUpdated": "2026-08-03T08:05:00+01:00",
+  "lastUpdatedBy": "codex-digest",
+  "brand": "sage",
+  "contributionLabel": "hub-contribution",
+  "onboardingLabel": "hub-onboarding",
+  "teamsWebhookConfigured": false,
+  "_note_teamsWebhook": "Set teamsWebhookConfigured to true once your Codex agent is posting digest summaries to your Teams channel (see codex-templates/teams-notifier.md). The webhook URL itself lives in your Codex setup, never in this repo.",
+  "intelHub": {
+    "label": "WiSE Intel Hub",
+    "url": "https://lewisvines.github.io/wise-intel-hub/",
+    "note": "Embedded from the wise-intel-hub GitHub Pages site. Change url here if the Intel Hub moves (e.g. to its Netlify address)."
+  }
+}

@@ -1,0 +1,755 @@
+{
+  "_comment": "SAMPLE DATA — one entry per market. `lead` is a person id or null (unassigned). Codex maintains readiness dates, NPS, scoreboard, competitor summaries/plays, launches and commercial figures from sourced signals; stakeholders, key dates, advisory board and key accountants are human-maintained (flag suspected changes via needsHuman). `advisoryBoard` carries dated insight from the market advisory board; `keyAccountants` are the practices we go to for insight and feedback; `commercial` holds targets, existing base size and ARR. Stakeholders carry `influence` (high|medium) and `relationship` (strong|developing|gap) forming the stakeholder map. `dependencies` lists what this market is waiting on from other teams: {name, on, status: on-track|at-risk|blocked, note, due}.",
+  "countries": [
+    {
+      "id": "uki",
+      "name": "UK & Ireland",
+      "code": "UK",
+      "lead": "lewis",
+      "readiness": [
+        {
+          "item": "Website updated",
+          "date": "2026-07-28",
+          "note": "WiSE landing page refreshed with beta proof points"
+        },
+        {
+          "item": "Messaging framework updated",
+          "date": "2026-07-24",
+          "note": "v1 messaging house applied"
+        },
+        {
+          "item": "Propositions updated",
+          "date": "2026-06-19",
+          "note": "Bundle proposition pending pricing sign-off"
+        }
+      ],
+      "keyDates": [
+        {
+          "date": "2026-09-10",
+          "label": "Sage Sessions London"
+        },
+        {
+          "date": "2026-09-22",
+          "label": "WiSE GA — tier-1 launch market"
+        },
+        {
+          "date": "2026-10-06",
+          "label": "Partner enablement roadshow"
+        }
+      ],
+      "stakeholders": [
+        {
+          "name": "R. Whitfield",
+          "role": "Country Marketing Lead",
+          "area": "Campaigns & demand",
+          "influence": "high",
+          "relationship": "strong"
+        },
+        {
+          "name": "S. Okafor",
+          "role": "Sales Director, Mid-market",
+          "area": "Sales alignment & enablement",
+          "influence": "high",
+          "relationship": "developing"
+        },
+        {
+          "name": "H. Barnes",
+          "role": "PR & Comms Manager",
+          "area": "Press, analysts, launch comms",
+          "influence": "medium",
+          "relationship": "strong"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Competitor A",
+          "summary": "Strongest brand recognition in mid-market accounting; wins on ecosystem breadth, weaker on onboarding speed — our fastest displacement angle.",
+          "play": "Bundling ecosystem apps free for 6 months to lock in mid-market renewals before our GA."
+        },
+        {
+          "name": "Competitor B",
+          "summary": "Aggressive pricing and self-serve motion targeting small business; limited enterprise credibility. Watch their Q4 promo cycle around our GA window.",
+          "play": "Q4 price promotion aimed at small business self-serve — expect noise in our launch window."
+        }
+      ],
+      "challenges": [
+        "Enablement platform migration slip risks day-one seller readiness (challenge c3).",
+        "Legacy product messaging still ranks above WiSE pages in organic search."
+      ],
+      "nps": {
+        "score": 42,
+        "previous": 38,
+        "responses": 310,
+        "updated": "2026-07-31",
+        "topThemes": [
+          "Onboarding praised since May release",
+          "Reporting depth is the top detractor theme"
+        ]
+      },
+      "scoreboard": {
+        "website": "green",
+        "messaging": "green",
+        "enablement": "amber",
+        "assets": "amber",
+        "press": "green"
+      },
+      "advisoryBoard": {
+        "updated": "2026-07-21",
+        "insights": [
+          "Board pushed for accountant-first launch sequencing — practices influence 60%+ of switching decisions in mid-market.",
+          "Consensus that reporting depth must be addressed in the first post-GA release or churn risk rises."
+        ]
+      },
+      "keyAccountants": [
+        {
+          "name": "J. Hartley",
+          "firm": "Hartley & Co (demo)",
+          "focus": "Mid-market advisory, cloud migration"
+        },
+        {
+          "name": "P. Nwosu",
+          "firm": "Meridian Partners (demo)",
+          "focus": "Practice tech adoption, app ecosystem"
+        },
+        {
+          "name": "S. Craig",
+          "firm": "Craig Accountancy (demo)",
+          "focus": "Small business compliance"
+        }
+      ],
+      "productLaunches": [
+        {
+          "name": "WiSE GA — tier-1 wave",
+          "date": "2026-09-22",
+          "summary": "Full commercial launch, UK&I lead market."
+        },
+        {
+          "name": "WiSE reporting pack v1",
+          "date": "2026-11-10",
+          "summary": "First post-GA release targeting the top detractor theme."
+        }
+      ],
+      "marketingInitiatives": [
+        {
+          "name": "Launch campaign — 'Work smarter'",
+          "status": "planned",
+          "date": "2026-09-15"
+        },
+        {
+          "name": "Accountant channel nurture programme",
+          "status": "live",
+          "date": "2026-07-01"
+        },
+        {
+          "name": "Sage Sessions London presence",
+          "status": "planned",
+          "date": "2026-09-10"
+        }
+      ],
+      "commercial": {
+        "updated": "2026-07-31",
+        "baseSize": 4200,
+        "arr": "£6.8m",
+        "targets": [
+          "£2m launch-sourced pipeline in first 60 days",
+          "600 new WiSE customers by end of Q1 FY27",
+          "15% of base migrated to WiSE within 12 months"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "Enablement platform migration",
+          "on": "L&D / IT",
+          "status": "blocked",
+          "note": "Two-week slip confirmed — drives challenge c3 and milestone m3.",
+          "due": "2026-08-21"
+        },
+        {
+          "name": "Bundle pricing sign-off",
+          "on": "Pricing & Finance",
+          "status": "at-risk",
+          "note": "Blocks proposition refresh and launch FAQ pricing section.",
+          "due": "2026-08-08"
+        },
+        {
+          "name": "Launch environment readiness",
+          "on": "Product Ops",
+          "status": "on-track",
+          "note": "Environment sign-offs completed 1 Aug.",
+          "due": "2026-09-08"
+        }
+      ]
+    },
+    {
+      "id": "es",
+      "name": "Spain",
+      "code": "ES",
+      "lead": "zoraida",
+      "readiness": [
+        {
+          "item": "Website updated",
+          "date": "2026-07-15",
+          "note": "Localised hero + pricing page live"
+        },
+        {
+          "item": "Messaging framework updated",
+          "date": "2026-06-30",
+          "note": "Awaiting v1 messaging house localisation"
+        },
+        {
+          "item": "Propositions updated",
+          "date": "2026-05-22",
+          "note": "Needs refresh against new bundle structure"
+        }
+      ],
+      "keyDates": [
+        {
+          "date": "2026-09-17",
+          "label": "Sage Sessions Madrid"
+        },
+        {
+          "date": "2026-10-01",
+          "label": "WiSE launch — Spain wave"
+        },
+        {
+          "date": "2026-10-15",
+          "label": "Autónomos campaign kick-off"
+        }
+      ],
+      "stakeholders": [
+        {
+          "name": "M. Ibarra",
+          "role": "Country Marketing Lead",
+          "area": "Campaigns & local GTM",
+          "influence": "high",
+          "relationship": "strong"
+        },
+        {
+          "name": "C. Duarte",
+          "role": "Channel Sales Lead",
+          "area": "Partner & accountant channel",
+          "influence": "high",
+          "relationship": "gap"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Competitor C",
+          "summary": "Local incumbent with deep accountant-channel loyalty; slow release cadence. We win on product velocity, lose on channel trust — partner program is the battleground.",
+          "play": "Deepening gestoría loyalty programme with revenue-share incentives."
+        },
+        {
+          "name": "Competitor B",
+          "summary": "Growing via freemium self-serve; strong with autónomos. Their localisation is thin — an opening for our launch messaging.",
+          "play": "Freemium push on autónomos with minimal localisation."
+        }
+      ],
+      "challenges": [
+        "Messaging house localisation not yet scheduled — blocks website and campaign refresh.",
+        "Accountant channel sentiment mixed after spring pricing change."
+      ],
+      "nps": {
+        "score": 35,
+        "previous": 36,
+        "responses": 140,
+        "updated": "2026-07-25",
+        "topThemes": [
+          "Support wait times the leading detractor theme",
+          "Invoicing compliance features well reviewed"
+        ]
+      },
+      "scoreboard": {
+        "website": "amber",
+        "messaging": "red",
+        "enablement": "amber",
+        "assets": "amber",
+        "press": "amber"
+      },
+      "advisoryBoard": {
+        "updated": "2026-06-28",
+        "insights": [
+          "Advisors flagged that pricing communication, not product, drove spring channel friction.",
+          "Autónomos segment seen as fastest WiSE entry point if onboarding stays under one day."
+        ]
+      },
+      "keyAccountants": [
+        {
+          "name": "R. Molina",
+          "firm": "Molina Asesores (demo)",
+          "focus": "Autónomos & micro-business"
+        },
+        {
+          "name": "A. Ferrer",
+          "firm": "Ferrer y Asociados (demo)",
+          "focus": "Channel sentiment, gestorías"
+        }
+      ],
+      "productLaunches": [
+        {
+          "name": "WiSE launch — Spain wave",
+          "date": "2026-10-01",
+          "summary": "Second wave, accountant-channel-led motion."
+        }
+      ],
+      "marketingInitiatives": [
+        {
+          "name": "Autónomos campaign",
+          "status": "planned",
+          "date": "2026-10-15"
+        },
+        {
+          "name": "Gestoría partner webinar series",
+          "status": "live",
+          "date": "2026-07-20"
+        }
+      ],
+      "commercial": {
+        "updated": "2026-07-25",
+        "baseSize": 1850,
+        "arr": "€2.1m",
+        "targets": [
+          "Rebuild channel NPS above 40 by Q1",
+          "250 WiSE customers via gestoría channel by Q1 FY27"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "Messaging house localisation",
+          "on": "UK PMM (Zoraida) + local agency",
+          "status": "blocked",
+          "note": "Not yet scheduled — blocks website and campaign refresh.",
+          "due": "2026-08-29"
+        },
+        {
+          "name": "Channel sentiment recovery plan",
+          "on": "Channel Sales",
+          "status": "at-risk",
+          "note": "Needed before gestoría webinar series scales.",
+          "due": "2026-09-05"
+        }
+      ]
+    },
+    {
+      "id": "fr",
+      "name": "France",
+      "code": "FR",
+      "lead": "anais",
+      "readiness": [
+        {
+          "item": "Website updated",
+          "date": "2026-07-30",
+          "note": "New WiSE section live incl. e-invoicing hub"
+        },
+        {
+          "item": "Messaging framework updated",
+          "date": "2026-07-22",
+          "note": "Localised with e-invoicing regulation angle"
+        },
+        {
+          "item": "Propositions updated",
+          "date": "2026-07-10",
+          "note": "Refreshed for compliance-led positioning"
+        }
+      ],
+      "keyDates": [
+        {
+          "date": "2026-09-01",
+          "label": "E-invoicing mandate milestone — comms wave"
+        },
+        {
+          "date": "2026-09-24",
+          "label": "Sage Sessions Paris"
+        },
+        {
+          "date": "2026-10-01",
+          "label": "WiSE launch — France wave"
+        }
+      ],
+      "stakeholders": [
+        {
+          "name": "L. Moreau",
+          "role": "Country Marketing Lead",
+          "area": "Campaigns & regulation comms",
+          "influence": "high",
+          "relationship": "strong"
+        },
+        {
+          "name": "T. Nguyen",
+          "role": "Product Manager, Compliance",
+          "area": "E-invoicing readiness",
+          "influence": "high",
+          "relationship": "strong"
+        },
+        {
+          "name": "E. Fontaine",
+          "role": "Sales Enablement Lead",
+          "area": "Seller readiness",
+          "influence": "medium",
+          "relationship": "developing"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Competitor D",
+          "summary": "Leading with an e-invoicing compliance narrative and heavy paid spend; product depth behind ours. Battlecard in progress (o3-kr1) — key launch-window threat.",
+          "play": "Aggressive paid capture of e-invoicing search demand with overstated compliance claims."
+        },
+        {
+          "name": "Competitor A",
+          "summary": "Present but under-invested in France; strongest in enterprise accounts via global deals.",
+          "play": "Enterprise global-deal motion; little local investment."
+        }
+      ],
+      "challenges": [
+        "E-invoicing regulation timeline drives urgency — messaging must stay ahead of competitor claims.",
+        "Win/loss interview coverage thin in France (2 of 10 target)."
+      ],
+      "nps": {
+        "score": 47,
+        "previous": 41,
+        "responses": 205,
+        "updated": "2026-07-29",
+        "topThemes": [
+          "Compliance readiness driving promoter comments",
+          "Mobile app parity requested by detractors"
+        ]
+      },
+      "scoreboard": {
+        "website": "green",
+        "messaging": "green",
+        "enablement": "amber",
+        "assets": "green",
+        "press": "amber"
+      },
+      "advisoryBoard": {
+        "updated": "2026-07-26",
+        "insights": [
+          "Board unanimous: own the e-invoicing mandate narrative before competitors define it.",
+          "Recommendation to publish a compliance-readiness index as a demand-gen asset."
+        ]
+      },
+      "keyAccountants": [
+        {
+          "name": "C. Bernard",
+          "firm": "Cabinet Bernard (demo)",
+          "focus": "E-invoicing readiness, mid-market"
+        },
+        {
+          "name": "M. Diallo",
+          "firm": "Diallo Expertise (demo)",
+          "focus": "Compliance advisory"
+        }
+      ],
+      "productLaunches": [
+        {
+          "name": "WiSE launch — France wave",
+          "date": "2026-10-01",
+          "summary": "Compliance-led launch tied to e-invoicing mandate."
+        },
+        {
+          "name": "E-invoicing module GA",
+          "date": "2026-09-01",
+          "summary": "Regulatory feature release ahead of mandate milestone."
+        }
+      ],
+      "marketingInitiatives": [
+        {
+          "name": "E-invoicing mandate comms wave",
+          "status": "live",
+          "date": "2026-08-15"
+        },
+        {
+          "name": "Sage Sessions Paris presence",
+          "status": "planned",
+          "date": "2026-09-24"
+        }
+      ],
+      "commercial": {
+        "updated": "2026-07-29",
+        "baseSize": 2600,
+        "arr": "€3.4m",
+        "targets": [
+          "Capture 20% of e-invoicing-driven switchers in H1 FY27",
+          "400 WiSE customers by end of Q1 FY27"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "E-invoicing module GA",
+          "on": "Product / Compliance",
+          "status": "on-track",
+          "note": "Regulatory release must land before the mandate comms wave.",
+          "due": "2026-09-01"
+        },
+        {
+          "name": "Localised enablement content",
+          "on": "Enablement team",
+          "status": "at-risk",
+          "note": "Depends on UK enablement path completing first (m3).",
+          "due": "2026-09-15"
+        }
+      ]
+    },
+    {
+      "id": "pt",
+      "name": "Portugal",
+      "code": "PT",
+      "lead": "zoraida",
+      "readiness": [
+        {
+          "item": "Website updated",
+          "date": "2026-07-08",
+          "note": "WiSE overview page live, localisation partial"
+        },
+        {
+          "item": "Messaging framework updated",
+          "date": "2026-06-15",
+          "note": "Awaiting messaging house localisation"
+        },
+        {
+          "item": "Propositions updated",
+          "date": "2026-06-01",
+          "note": "Aligned to ES bundle structure, review pending"
+        }
+      ],
+      "keyDates": [
+        {
+          "date": "2026-10-08",
+          "label": "WiSE launch — Portugal wave"
+        },
+        {
+          "date": "2026-10-22",
+          "label": "Lisbon partner day"
+        }
+      ],
+      "stakeholders": [
+        {
+          "name": "I. Costa",
+          "role": "Country Marketing Lead",
+          "area": "Campaigns & local GTM",
+          "influence": "high",
+          "relationship": "developing"
+        },
+        {
+          "name": "D. Almeida",
+          "role": "Sales Lead",
+          "area": "Direct & channel sales",
+          "influence": "medium",
+          "relationship": "developing"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Competitor C",
+          "summary": "Extending Iberian channel strength from Spain into Portugal; same playbook, smaller footprint.",
+          "play": "Replicating Spanish revenue-share programme with Portuguese contabilistas."
+        },
+        {
+          "name": "Competitor B",
+          "summary": "Self-serve freemium presence; low localisation, low channel investment.",
+          "play": "Portuguese-language onboarding launched in June — watch conversion impact."
+        }
+      ],
+      "challenges": [
+        "Localisation dependent on Spanish messaging house completing first.",
+        "Small local team — launch support leans on ES resources."
+      ],
+      "nps": {
+        "score": 38,
+        "previous": 38,
+        "responses": 60,
+        "updated": "2026-07-15",
+        "topThemes": [
+          "Certified invoicing compliance praised",
+          "Requests for more local payroll depth"
+        ]
+      },
+      "scoreboard": {
+        "website": "amber",
+        "messaging": "red",
+        "enablement": "amber",
+        "assets": "red",
+        "press": "amber"
+      },
+      "advisoryBoard": {
+        "updated": "2026-06-30",
+        "insights": [
+          "Advisors see certified-invoicing compliance as the sharpest differentiation angle locally."
+        ]
+      },
+      "keyAccountants": [
+        {
+          "name": "T. Fonseca",
+          "firm": "Fonseca Contabilidade (demo)",
+          "focus": "SMB compliance & certification"
+        }
+      ],
+      "productLaunches": [
+        {
+          "name": "WiSE launch — Portugal wave",
+          "date": "2026-10-08",
+          "summary": "Follows Spain by one week; shared assets, local compliance angle."
+        }
+      ],
+      "marketingInitiatives": [
+        {
+          "name": "Contabilistas partner outreach",
+          "status": "planned",
+          "date": "2026-09-20"
+        }
+      ],
+      "commercial": {
+        "updated": "2026-07-15",
+        "baseSize": 540,
+        "arr": "€0.6m",
+        "targets": [
+          "80 WiSE customers by end of Q1 FY27",
+          "Two flagship contabilista partnerships signed pre-launch"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "Spanish messaging house completion",
+          "on": "ES market (Zoraida)",
+          "status": "blocked",
+          "note": "PT localisation starts only after ES is done.",
+          "due": "2026-09-12"
+        },
+        {
+          "name": "Shared launch assets from ES wave",
+          "on": "ES market team",
+          "status": "on-track",
+          "note": "Asset pack shared one week after Spain launch.",
+          "due": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "id": "de",
+      "name": "Germany",
+      "code": "DE",
+      "lead": null,
+      "readiness": [
+        {
+          "item": "Website updated",
+          "date": "2026-05-30",
+          "note": "Legacy product pages only — no WiSE presence yet"
+        },
+        {
+          "item": "Messaging framework updated",
+          "date": "2026-05-12",
+          "note": "Not started for WiSE"
+        },
+        {
+          "item": "Propositions updated",
+          "date": "2026-05-12",
+          "note": "Market entry proposition in scoping"
+        }
+      ],
+      "keyDates": [
+        {
+          "date": "2026-11-05",
+          "label": "Market entry review — go/no-go"
+        },
+        {
+          "date": "2027-01-15",
+          "label": "Earliest launch window (subject to review)"
+        }
+      ],
+      "stakeholders": [
+        {
+          "name": "K. Brandt",
+          "role": "Country Marketing Lead",
+          "area": "Local GTM readiness",
+          "influence": "high",
+          "relationship": "developing"
+        },
+        {
+          "name": "F. Weber",
+          "role": "Sales Director",
+          "area": "Commercial planning",
+          "influence": "high",
+          "relationship": "gap"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Competitor E",
+          "summary": "Dominant domestic incumbent with deep Steuerberater integration and strong compliance trust.",
+          "play": "Positioning cloud migration as 'safe modernisation' — pre-empting foreign entrants."
+        },
+        {
+          "name": "Competitor A",
+          "summary": "Growing mid-market presence via global accounts.",
+          "play": "Localised onboarding investment announced for 2027."
+        }
+      ],
+      "challenges": [
+        "No dedicated PMM in market yet — coverage gap ahead of entry review.",
+        "Steuerberater channel requires long trust-building lead time."
+      ],
+      "nps": {
+        "score": 31,
+        "previous": 33,
+        "responses": 45,
+        "updated": "2026-06-20",
+        "topThemes": [
+          "Existing base values stability",
+          "Feature parity with domestic incumbent questioned"
+        ]
+      },
+      "scoreboard": {
+        "website": "red",
+        "messaging": "red",
+        "enablement": "red",
+        "assets": "red",
+        "press": "red"
+      },
+      "advisoryBoard": {
+        "updated": "2026-06-10",
+        "insights": [
+          "Early counsel: do not launch without Steuerberater endorsement strategy in place."
+        ]
+      },
+      "keyAccountants": [
+        {
+          "name": "H. Krüger",
+          "firm": "Krüger Steuerberatung (demo)",
+          "focus": "Steuerberater channel dynamics"
+        }
+      ],
+      "productLaunches": [],
+      "marketingInitiatives": [
+        {
+          "name": "Market entry research programme",
+          "status": "live",
+          "date": "2026-07-01"
+        }
+      ],
+      "commercial": {
+        "updated": "2026-06-20",
+        "baseSize": 320,
+        "arr": "€0.4m",
+        "targets": [
+          "Entry decision evidence pack complete by November review"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "Market entry decision pack",
+          "on": "Strategy & Finance",
+          "status": "on-track",
+          "note": "Evidence pack due at the November go/no-go review.",
+          "due": "2026-11-05"
+        },
+        {
+          "name": "PMM hire for Germany",
+          "on": "Diego / HR",
+          "status": "at-risk",
+          "note": "Coverage gap ahead of entry review — no dedicated PMM yet.",
+          "due": "2026-10-15"
+        }
+      ]
+    }
+  ]
+}

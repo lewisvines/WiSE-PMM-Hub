@@ -1,0 +1,95 @@
+{
+  "_comment": "SAMPLE DATA — each person's current priorities. status: not-started | in-progress | blocked | done. visibility: 'private' (owner + their management chain only) or 'shared' (whole hub). Default new items to private; a person shares by setting visibility:'shared' (directly or by asking Codex). OKRs are always visible to everyone — visibility only applies to tasks/workflows here.",
+  "priorities": [
+    {
+      "id": "p-lewis-1",
+      "owner": "lewis",
+      "title": "Finalise launch readiness checklist with product ops",
+      "status": "in-progress",
+      "due": "2026-08-07",
+      "workstream": "launch-gtm",
+      "linkedGoal": "o1-kr1",
+      "visibility": "shared"
+    },
+    {
+      "id": "p-lewis-2",
+      "owner": "lewis",
+      "title": "Agree launch tiering with regional marketing leads",
+      "status": "in-progress",
+      "due": "2026-08-12",
+      "workstream": "launch-gtm",
+      "linkedGoal": "o1",
+      "visibility": "private"
+    },
+    {
+      "id": "p-lewis-3",
+      "owner": "lewis",
+      "title": "Draft exec launch update for Diego's leadership review",
+      "status": "not-started",
+      "due": "2026-08-10",
+      "workstream": "strategy-alignment",
+      "linkedGoal": "o4-kr1",
+      "visibility": "private"
+    },
+    {
+      "id": "p-diego-1",
+      "owner": "diego",
+      "title": "Confirm WiSE launch budget envelope with finance",
+      "status": "blocked",
+      "due": "2026-08-08",
+      "workstream": "strategy-alignment",
+      "linkedGoal": "o4",
+      "visibility": "private"
+    },
+    {
+      "id": "p-diego-2",
+      "owner": "diego",
+      "title": "Review Q4 priorities vs updated product roadmap",
+      "status": "in-progress",
+      "due": "2026-08-06",
+      "workstream": "strategy-alignment",
+      "linkedGoal": "o4-kr2",
+      "visibility": "shared"
+    },
+    {
+      "id": "p-zoraida-1",
+      "owner": "zoraida",
+      "title": "Ship v2 first-call deck incorporating beta feedback",
+      "status": "in-progress",
+      "due": "2026-08-11",
+      "workstream": "positioning-enablement",
+      "linkedGoal": "o2-kr2",
+      "visibility": "shared"
+    },
+    {
+      "id": "p-zoraida-2",
+      "owner": "zoraida",
+      "title": "Build enablement path modules 3–5",
+      "status": "in-progress",
+      "due": "2026-08-18",
+      "workstream": "positioning-enablement",
+      "linkedGoal": "m3",
+      "visibility": "private"
+    },
+    {
+      "id": "p-anais-1",
+      "owner": "anais",
+      "title": "Complete battlecard for Competitor D",
+      "status": "in-progress",
+      "due": "2026-08-09",
+      "workstream": "intel-insights",
+      "linkedGoal": "o3-kr1",
+      "visibility": "private"
+    },
+    {
+      "id": "p-anais-2",
+      "owner": "anais",
+      "title": "Schedule 3 win/loss interviews from July deals",
+      "status": "not-started",
+      "due": "2026-08-14",
+      "workstream": "intel-insights",
+      "linkedGoal": "o3-kr3",
+      "visibility": "private"
+    }
+  ]
+}

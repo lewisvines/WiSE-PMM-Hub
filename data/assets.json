@@ -1,0 +1,83 @@
+{
+  "_comment": "SAMPLE DATA — the asset registry: the single answer to 'is this the latest version?'. Codex updates `version`, `updated` and `status` when it sees an asset ship or change; humans add new assets. type: messaging | deck | battlecard | web | enablement | press | campaign. status: current | in-review | outdated.",
+  "assets": [
+    {
+      "id": "a1",
+      "name": "WiSE Messaging House",
+      "type": "messaging",
+      "version": "v1.0",
+      "status": "current",
+      "owner": "zoraida",
+      "updated": "2026-07-24",
+      "url": "https://your-sharepoint/messaging-house",
+      "workstream": "positioning-enablement",
+      "countries": ["uki", "es", "fr"],
+      "note": "Signed off by sales + product leadership 24 Jul. Localisation for ES pending."
+    },
+    {
+      "id": "a2",
+      "name": "First-call deck",
+      "type": "deck",
+      "version": "v2 (draft)",
+      "status": "in-review",
+      "owner": "zoraida",
+      "updated": "2026-08-01",
+      "url": "https://your-sharepoint/first-call-deck",
+      "workstream": "positioning-enablement",
+      "countries": ["uki", "es", "fr"],
+      "note": "v2 incorporates beta feedback — ships 11 Aug. v1 still circulating; deprecate on ship."
+    },
+    {
+      "id": "a3",
+      "name": "Battlecard — Competitor A",
+      "type": "battlecard",
+      "version": "v1.2",
+      "status": "current",
+      "owner": "anais",
+      "updated": "2026-07-18",
+      "url": "https://your-sharepoint/battlecard-comp-a",
+      "workstream": "intel-insights",
+      "countries": ["uki", "fr"],
+      "note": ""
+    },
+    {
+      "id": "a4",
+      "name": "Battlecard — Competitor D",
+      "type": "battlecard",
+      "version": "draft",
+      "status": "in-review",
+      "owner": "anais",
+      "updated": "2026-08-02",
+      "url": "https://your-sharepoint/battlecard-comp-d",
+      "workstream": "intel-insights",
+      "countries": ["fr"],
+      "note": "Product confirmed feature comparison accuracy — final by 9 Aug."
+    },
+    {
+      "id": "a5",
+      "name": "WiSE launch FAQ (internal)",
+      "type": "enablement",
+      "version": "v0.9",
+      "status": "in-review",
+      "owner": "lewis",
+      "updated": "2026-07-29",
+      "url": "https://your-sharepoint/launch-faq",
+      "workstream": "launch-gtm",
+      "countries": ["uki", "es", "fr"],
+      "note": "Pricing section blocked on budget decision d3."
+    },
+    {
+      "id": "a6",
+      "name": "Website copy pack — launch wave",
+      "type": "web",
+      "version": "v1.1",
+      "status": "outdated",
+      "owner": "lewis",
+      "updated": "2026-06-20",
+      "url": "https://your-sharepoint/web-copy-pack",
+      "workstream": "launch-gtm",
+      "countries": ["uki"],
+      "note": "Pre-dates messaging house sign-off — needs a refresh pass."
+    }
+  ]
+}

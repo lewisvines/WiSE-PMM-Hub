@@ -1,0 +1,49 @@
+{
+  "_comment": "SAMPLE DATA — the decision log. status: decided | pending. Pending decisions surface on the Overview so nothing stalls silently. issueNumber links to the GitHub Issue thread where the decision is discussed. Pending decisions should carry `neededBy` (YYYY-MM-DD) — the dashboard shows waiting time vs deadline and flags overdue decisions.",
+  "decisions": [
+    {
+      "id": "d1",
+      "date": "2026-07-24",
+      "title": "WiSE messaging house v1 locked",
+      "decision": "Adopt the 'confident simplicity' messaging house as the single source for all launch assets. Revisit post-launch with win/loss data.",
+      "owner": "zoraida",
+      "status": "decided",
+      "decidedBy": "Sales + product leadership review",
+      "issueNumber": 4,
+      "workstream": "positioning-enablement"
+    },
+    {
+      "id": "d2",
+      "date": "2026-07-29",
+      "title": "Hub is the single reporting source for the pilot",
+      "decision": "During the pilot, all four members stop maintaining separate status decks; exec updates are generated from the hub.",
+      "owner": "diego",
+      "status": "decided",
+      "decidedBy": "Diego",
+      "issueNumber": 6,
+      "workstream": "strategy-alignment"
+    },
+    {
+      "id": "d3",
+      "date": "2026-08-02",
+      "title": "Phasing of launch budget across Q4/Q1",
+      "decision": "PENDING — team to recommend phasing option before Thursday's budget review. See challenge c2.",
+      "owner": "diego",
+      "status": "pending",
+      "issueNumber": 5,
+      "workstream": "strategy-alignment",
+      "neededBy": "2026-08-06"
+    },
+    {
+      "id": "d4",
+      "date": "2026-08-03",
+      "title": "Interim enablement delivery if platform slips",
+      "decision": "PENDING — choose between Teams live sessions or shifting milestone m3. See challenge c3.",
+      "owner": "lewis",
+      "status": "pending",
+      "issueNumber": 7,
+      "workstream": "launch-gtm",
+      "neededBy": "2026-08-10"
+    }
+  ]
+}

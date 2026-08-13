@@ -1,0 +1,65 @@
+{
+  "_comment": "SAMPLE DATA — action items captured by Codex from meeting transcripts (and Teams/email when a clear commitment is made). Each action lands on its owner's individual tracker in My View. status: open | done | dropped. Codex only records EXPLICIT commitments with a clear owner; due is set when stated in the meeting. Newest first.",
+  "actions": [
+    {
+      "id": "a-20260803-01",
+      "date": "2026-08-03",
+      "owner": "lewis",
+      "action": "Share the launch tiering proposal with regional marketing leads before Thursday's budget review",
+      "due": "2026-08-06",
+      "status": "open",
+      "source": "transcript",
+      "sourceRef": "Weekly sales alignment call, 31 Jul",
+      "addedBy": "codex",
+      "linkedGoal": "o1"
+    },
+    {
+      "id": "a-20260803-02",
+      "date": "2026-08-03",
+      "owner": "zoraida",
+      "action": "Circulate first-call deck v2 to the beta seller group for final feedback",
+      "due": "2026-08-08",
+      "status": "open",
+      "source": "transcript",
+      "sourceRef": "Weekly sales alignment call, 31 Jul",
+      "addedBy": "codex",
+      "linkedGoal": "o2-kr2"
+    },
+    {
+      "id": "a-20260802-01",
+      "date": "2026-08-02",
+      "owner": "anais",
+      "action": "Send Competitor D battlecard draft to product for final accuracy pass",
+      "due": "2026-08-05",
+      "status": "done",
+      "source": "email",
+      "sourceRef": "Email thread: Battlecard review",
+      "addedBy": "codex",
+      "linkedGoal": "o3-kr1"
+    },
+    {
+      "id": "a-20260802-02",
+      "date": "2026-08-02",
+      "owner": "diego",
+      "action": "Bring budget phasing options to Thursday's finance review with a team recommendation",
+      "due": "2026-08-06",
+      "status": "open",
+      "source": "email",
+      "sourceRef": "Email: FY27 budget planning",
+      "addedBy": "codex",
+      "linkedGoal": "o4"
+    },
+    {
+      "id": "a-20260801-01",
+      "date": "2026-08-01",
+      "owner": "lewis",
+      "action": "Confirm interim enablement delivery option with L&D by end of week",
+      "due": "2026-08-07",
+      "status": "open",
+      "source": "teams",
+      "sourceRef": "Teams: WiSE Launch channel, 1 Aug",
+      "addedBy": "codex",
+      "linkedGoal": "m3"
+    }
+  ]
+}

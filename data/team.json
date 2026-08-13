@@ -1,0 +1,99 @@
+{
+  "_comment": "SAMPLE DATA — replace roles/focus with reality. `reportsTo` builds the visibility hierarchy: managers (and their managers) can see their reports' tasks; OKRs are visible to everyone; tasks marked visibility:'shared' are visible to the whole hub. `country` links a person to a country page. `status`: 'active' | 'pending' — new joiners arrive as pending via an onboarding issue (`onboardingIssue` holds its number) and become active only when their named manager approves on that issue.",
+  "people": [
+    {
+      "id": "lewis",
+      "name": "Lewis Vines",
+      "role": "PMM Lead — WiSE",
+      "isPilotOwner": true,
+      "workstreams": [
+        "launch-gtm"
+      ],
+      "avatarInitials": "LV",
+      "github": "lewis-placeholder",
+      "focus": "Launch & GTM readiness, hub ownership",
+      "reportsTo": "diego",
+      "country": "uki",
+      "status": "active"
+    },
+    {
+      "id": "diego",
+      "name": "Diego",
+      "role": "Director, Product Marketing",
+      "isSponsor": true,
+      "workstreams": [
+        "strategy-alignment"
+      ],
+      "avatarInitials": "D",
+      "github": "diego-placeholder",
+      "focus": "Strategy, exec alignment, prioritisation calls",
+      "reportsTo": null,
+      "status": "active"
+    },
+    {
+      "id": "zoraida",
+      "name": "Zoraida",
+      "role": "Product Marketing Manager",
+      "workstreams": [
+        "positioning-enablement"
+      ],
+      "avatarInitials": "Z",
+      "github": "zoraida-placeholder",
+      "focus": "Positioning, messaging & sales enablement",
+      "reportsTo": "lewis",
+      "country": "es",
+      "status": "active"
+    },
+    {
+      "id": "anais",
+      "name": "Anais",
+      "role": "Product Marketing Manager",
+      "workstreams": [
+        "intel-insights"
+      ],
+      "avatarInitials": "A",
+      "github": "anais-placeholder",
+      "focus": "Competitive intel & customer insights",
+      "reportsTo": "lewis",
+      "country": "fr",
+      "status": "active"
+    },
+    {
+      "id": "marco",
+      "name": "Marco (joining)",
+      "role": "Product Marketing Manager",
+      "status": "pending",
+      "reportsTo": "lewis",
+      "onboardingIssue": 9,
+      "workstreams": [
+        "launch-gtm"
+      ],
+      "avatarInitials": "M",
+      "github": "marco-placeholder",
+      "country": "uki",
+      "focus": "Awaiting manager approval — onboarding issue #9"
+    }
+  ],
+  "workstreams": [
+    {
+      "id": "launch-gtm",
+      "label": "Launch & GTM Readiness",
+      "colorSlot": 1
+    },
+    {
+      "id": "positioning-enablement",
+      "label": "Positioning & Enablement",
+      "colorSlot": 2
+    },
+    {
+      "id": "intel-insights",
+      "label": "Competitive Intel & Insights",
+      "colorSlot": 3
+    },
+    {
+      "id": "strategy-alignment",
+      "label": "Strategy & Exec Alignment",
+      "colorSlot": 4
+    }
+  ]
+}

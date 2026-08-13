@@ -1,0 +1,49 @@
+{
+  "_comment": "SAMPLE DATA — the run log for Codex digest agents. One entry per run (twice daily). This is how the team sees the AI is alive and what it did. Newest first. Keep the last ~30 runs; archive older ones to data/archive/.",
+  "digests": [
+    {
+      "id": "dig-20260803-am",
+      "runAt": "2026-08-03T08:05:00+01:00",
+      "window": "2026-08-02T16:00 → 2026-08-03T08:00",
+      "agent": "codex-digest",
+      "status": "success",
+      "sourcesScanned": { "emails": 14, "teamsMessages": 47, "transcripts": 1, "roadmapDocs": 0 },
+      "itemsWritten": { "updates": 2, "challenges": 1, "decisions": 1, "prioritiesTouched": 1, "goalsTouched": 1 },
+      "highlights": [
+        "Messaging house signed off — o2-kr1 moved to 80%",
+        "Enablement platform slip raised as new challenge c3 (high)",
+        "Two decisions now pending ahead of Thursday's budget review"
+      ],
+      "needsHuman": [
+        "Decision d3 (budget phasing) needs a team recommendation before Thursday"
+      ]
+    },
+    {
+      "id": "dig-20260802-pm",
+      "runAt": "2026-08-02T16:04:00+01:00",
+      "window": "2026-08-02T08:00 → 2026-08-02T16:00",
+      "agent": "codex-digest",
+      "status": "success",
+      "sourcesScanned": { "emails": 22, "teamsMessages": 31, "transcripts": 2, "roadmapDocs": 1 },
+      "itemsWritten": { "updates": 2, "challenges": 0, "decisions": 1, "prioritiesTouched": 2, "goalsTouched": 0 },
+      "highlights": [
+        "Battlecard for Competitor D confirmed accurate by product",
+        "Finance raised budget phasing question — logged as decision-needed"
+      ],
+      "needsHuman": []
+    },
+    {
+      "id": "dig-20260801-am",
+      "runAt": "2026-08-01T08:03:00+01:00",
+      "window": "2026-07-31T16:00 → 2026-08-01T08:00",
+      "agent": "codex-digest",
+      "status": "success",
+      "sourcesScanned": { "emails": 9, "teamsMessages": 18, "transcripts": 0, "roadmapDocs": 1 },
+      "itemsWritten": { "updates": 1, "challenges": 0, "decisions": 0, "prioritiesTouched": 0, "goalsTouched": 1 },
+      "highlights": [
+        "Launch readiness checklist 55% → 62% from roadmap tracker"
+      ],
+      "needsHuman": []
+    }
+  ]
+}

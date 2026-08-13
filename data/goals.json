@@ -1,0 +1,356 @@
+{
+  "_comment": "SAMPLE DATA — goals support two models side by side: quarterly OKRs (objectives[]) and launch milestones (milestones[]). Progress on a KR is 0–100. Milestone status: planned | on-track | at-risk | late | done. Each KR carries `history` — [{date, progress}] appended by Codex whenever progress changes — used for trend deltas and sparklines. Each objective carries `pillar` (id from strategy.json) so individual OKRs ladder up to the WiSE strategy.",
+  "quarter": "Q4 FY26 (Jul–Sep 2026)",
+  "objectives": [
+    {
+      "id": "o1",
+      "title": "Nail WiSE launch readiness",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "keyResults": [
+        {
+          "id": "o1-kr1",
+          "title": "Launch readiness checklist 100% complete by GA",
+          "progress": 62,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 30
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 48
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 55
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 62
+            }
+          ]
+        },
+        {
+          "id": "o1-kr2",
+          "title": "90% of sellers complete WiSE enablement path",
+          "progress": 45,
+          "confidence": "at-risk",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 10
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 30
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 42
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 45
+            }
+          ]
+        },
+        {
+          "id": "o1-kr3",
+          "title": "All tier-1 launch assets signed off 2 weeks pre-GA",
+          "progress": 70,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 25
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 50
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 65
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 70
+            }
+          ]
+        }
+      ],
+      "pillar": "pillar-launch"
+    },
+    {
+      "id": "o2",
+      "title": "Establish WiSE positioning that wins",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "keyResults": [
+        {
+          "id": "o2-kr1",
+          "title": "Messaging house signed off by product + sales leadership",
+          "progress": 80,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 40
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 60
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 65
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 80
+            }
+          ]
+        },
+        {
+          "id": "o2-kr2",
+          "title": "First-call deck adopted by 75% of the sales team",
+          "progress": 30,
+          "confidence": "at-risk",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 5
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 15
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 28
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 30
+            }
+          ]
+        },
+        {
+          "id": "o2-kr3",
+          "title": "3 customer proof points published",
+          "progress": 33,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 0
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 33
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 33
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 33
+            }
+          ]
+        }
+      ],
+      "pillar": "pillar-positioning"
+    },
+    {
+      "id": "o3",
+      "title": "Build always-on WiSE market intelligence",
+      "owner": "anais",
+      "workstream": "intel-insights",
+      "keyResults": [
+        {
+          "id": "o3-kr1",
+          "title": "Battlecards live for top 4 competitors",
+          "progress": 75,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 25
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 50
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 70
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 75
+            }
+          ]
+        },
+        {
+          "id": "o3-kr2",
+          "title": "Fortnightly insight digest adopted by product team",
+          "progress": 50,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 20
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 35
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 50
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 50
+            }
+          ]
+        },
+        {
+          "id": "o3-kr3",
+          "title": "Win/loss interviews: 10 completed this quarter",
+          "progress": 40,
+          "confidence": "at-risk",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 10
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 20
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 35
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 40
+            }
+          ]
+        }
+      ],
+      "pillar": "pillar-intel"
+    },
+    {
+      "id": "o4",
+      "title": "Keep WiSE priorities aligned with exec strategy",
+      "owner": "diego",
+      "workstream": "strategy-alignment",
+      "keyResults": [
+        {
+          "id": "o4-kr1",
+          "title": "Monthly exec readout delivered from the hub, zero manual decks",
+          "progress": 25,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 0
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 10
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 25
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 25
+            }
+          ]
+        },
+        {
+          "id": "o4-kr2",
+          "title": "100% of roadmap changes reflected in hub within 48h",
+          "progress": 60,
+          "confidence": "on-track",
+          "history": [
+            {
+              "date": "2026-07-06",
+              "progress": 20
+            },
+            {
+              "date": "2026-07-20",
+              "progress": 40
+            },
+            {
+              "date": "2026-08-01",
+              "progress": 55
+            },
+            {
+              "date": "2026-08-03",
+              "progress": 60
+            }
+          ]
+        }
+      ],
+      "pillar": "pillar-alignment"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "m1",
+      "title": "Messaging house locked",
+      "date": "2026-07-24",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "status": "done"
+    },
+    {
+      "id": "m2",
+      "title": "Beta customer stories captured",
+      "date": "2026-08-14",
+      "owner": "anais",
+      "workstream": "intel-insights",
+      "status": "on-track"
+    },
+    {
+      "id": "m3",
+      "title": "Sales enablement path live",
+      "date": "2026-08-21",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "status": "at-risk"
+    },
+    {
+      "id": "m4",
+      "title": "Tier-1 asset sign-off complete",
+      "date": "2026-09-04",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "status": "on-track"
+    },
+    {
+      "id": "m5",
+      "title": "Press & analyst pre-brief",
+      "date": "2026-09-11",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "status": "planned"
+    },
+    {
+      "id": "m6",
+      "title": "WiSE GA launch",
+      "date": "2026-09-22",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "status": "planned"
+    }
+  ]
+}

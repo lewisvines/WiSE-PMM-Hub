@@ -1,0 +1,91 @@
+{
+  "_comment": "SAMPLE DATA — the rolling update feed. Codex appends here twice a day from emails, Teams and transcripts; humans can append manually. Newest first. type: win | progress | blocker | decision-needed | fyi. source: teams | email | transcript | manual | roadmap. Optional `mentions`: array of person ids the update is flagged to — these land in each person's My View inbox.",
+  "updates": [
+    {
+      "id": "u-20260803-01",
+      "date": "2026-08-03T08:05:00+01:00",
+      "author": "codex",
+      "onBehalfOf": "zoraida",
+      "type": "win",
+      "workstream": "positioning-enablement",
+      "summary": "Sales leadership signed off the WiSE messaging house in Friday's review — no further changes requested. Unblocks first-call deck v2.",
+      "source": "transcript",
+      "sourceRef": "Weekly sales alignment call, 31 Jul",
+      "confidence": "high",
+      "relatedGoal": "o2-kr1"
+    },
+    {
+      "id": "u-20260803-02",
+      "date": "2026-08-03T08:05:00+01:00",
+      "author": "codex",
+      "onBehalfOf": "lewis",
+      "type": "blocker",
+      "workstream": "launch-gtm",
+      "summary": "Enablement platform migration slips two weeks per Teams thread with L&D — puts the 21 Aug enablement path milestone at risk. Raised as challenge c3.",
+      "source": "teams",
+      "sourceRef": "Teams: WiSE Launch channel, 1 Aug",
+      "confidence": "high",
+      "relatedChallenge": "c3",
+      "relatedGoal": "m3",
+      "mentions": [
+        "diego"
+      ]
+    },
+    {
+      "id": "u-20260802-01",
+      "date": "2026-08-02T16:04:00+01:00",
+      "author": "codex",
+      "onBehalfOf": "anais",
+      "type": "progress",
+      "workstream": "intel-insights",
+      "summary": "Competitor D battlecard at draft stage; product confirmed feature comparison accuracy. On track for 9 Aug.",
+      "source": "email",
+      "sourceRef": "Email thread: Battlecard review",
+      "confidence": "medium",
+      "relatedGoal": "o3-kr1"
+    },
+    {
+      "id": "u-20260802-02",
+      "date": "2026-08-02T16:04:00+01:00",
+      "author": "codex",
+      "onBehalfOf": "diego",
+      "type": "decision-needed",
+      "workstream": "strategy-alignment",
+      "summary": "Finance asked whether launch spend should be phased across Q4/Q1 — @lewis @zoraida @anais: Diego needs a recommendation from the team before Thursday's budget review.",
+      "source": "email",
+      "sourceRef": "Email: FY27 budget planning",
+      "confidence": "high",
+      "relatedChallenge": "c2",
+      "mentions": [
+        "lewis",
+        "zoraida",
+        "anais"
+      ]
+    },
+    {
+      "id": "u-20260801-01",
+      "date": "2026-08-01T08:03:00+01:00",
+      "author": "codex",
+      "onBehalfOf": "lewis",
+      "type": "progress",
+      "workstream": "launch-gtm",
+      "summary": "Launch readiness checklist moved from 55% → 62% after product ops completed environment sign-offs.",
+      "source": "roadmap",
+      "sourceRef": "Internal roadmap tracker",
+      "confidence": "high",
+      "relatedGoal": "o1-kr1"
+    },
+    {
+      "id": "u-20260731-01",
+      "date": "2026-07-31T16:02:00+01:00",
+      "author": "manual",
+      "onBehalfOf": "zoraida",
+      "type": "fyi",
+      "workstream": "positioning-enablement",
+      "summary": "Beta customer quote approved for use in launch assets — added to the proof point library.",
+      "source": "manual",
+      "confidence": "high",
+      "relatedGoal": "o2-kr3"
+    }
+  ]
+}

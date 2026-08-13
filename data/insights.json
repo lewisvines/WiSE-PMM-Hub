@@ -1,0 +1,70 @@
+{
+  "_comment": "SAMPLE DATA — the win/loss & insight library. Codex appends entries from win/loss interviews, NPS verbatims, competitive news and research; humans can add via Contribute. type: win-loss | customer-quote | competitor-note | research. Newest first. Tags are free-form lowercase.",
+  "insights": [
+    {
+      "id": "i-20260801-01",
+      "date": "2026-08-01",
+      "type": "win-loss",
+      "outcome": "won",
+      "country": "uki",
+      "competitor": "Competitor A",
+      "tags": ["onboarding", "mid-market"],
+      "summary": "Mid-market win vs Competitor A: buyer cited 2-week onboarding vs their 8-week implementation as the deciding factor. Price was not a factor.",
+      "source": "Win/loss interview, 1 Aug",
+      "addedBy": "anais"
+    },
+    {
+      "id": "i-20260730-01",
+      "date": "2026-07-30",
+      "type": "customer-quote",
+      "country": "fr",
+      "tags": ["e-invoicing", "compliance", "proof-point"],
+      "summary": "\"WiSE is the first tool that made the e-invoicing mandate feel like an opportunity instead of a deadline.\" — Beta customer, approved for launch assets.",
+      "source": "Beta programme feedback",
+      "addedBy": "zoraida"
+    },
+    {
+      "id": "i-20260728-01",
+      "date": "2026-07-28",
+      "type": "win-loss",
+      "outcome": "lost",
+      "country": "es",
+      "competitor": "Competitor C",
+      "tags": ["accountant-channel", "trust"],
+      "summary": "Lost a 40-seat deal: the customer's accountant recommended Competitor C. Product preferred ours; channel trust decided it. Third loss this quarter with the same pattern.",
+      "source": "Win/loss interview, 28 Jul",
+      "addedBy": "anais"
+    },
+    {
+      "id": "i-20260725-01",
+      "date": "2026-07-25",
+      "type": "competitor-note",
+      "country": "fr",
+      "competitor": "Competitor D",
+      "tags": ["paid-media", "e-invoicing"],
+      "summary": "Competitor D doubled paid search spend on e-invoicing terms in France; their claims overstate current product capability — documented in the battlecard draft.",
+      "source": "Competitive monitoring",
+      "addedBy": "anais"
+    },
+    {
+      "id": "i-20260722-01",
+      "date": "2026-07-22",
+      "type": "research",
+      "country": "uki",
+      "tags": ["reporting", "detractor-theme"],
+      "summary": "NPS verbatim analysis: reporting depth is the top detractor theme for the third consecutive quarter — now flagged to product as a launch-window risk.",
+      "source": "Q3 NPS verbatims",
+      "addedBy": "anais"
+    },
+    {
+      "id": "i-20260718-01",
+      "date": "2026-07-18",
+      "type": "customer-quote",
+      "country": "uki",
+      "tags": ["onboarding", "proof-point"],
+      "summary": "\"We were live before the trial ended.\" — Beta customer, cleared for use in tier-1 launch assets.",
+      "source": "Beta programme feedback",
+      "addedBy": "zoraida"
+    }
+  ]
+}

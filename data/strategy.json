@@ -1,0 +1,53 @@
+{
+  "_comment": "SAMPLE DATA — the WiSE strategy layer. Maintained by humans (leadership); Codex only updates seniorOkrs progress/history when a sourced signal appears, and never edits vision/pillars. Individual objectives in goals.json reference a pillar id to show how OKRs ladder up.",
+  "vision": "Make WiSE the product every Sage customer discovers, understands and adopts without friction — with product marketing operating as one always-aligned team across every market.",
+  "narrative": "FY26 Q4 is the WiSE launch quarter. Everything ladders to three things: land the launch, win the message, and know the market better than anyone. This hub is the single source of truth for how we're doing against that.",
+  "updated": "2026-07-21",
+  "updatedBy": "diego",
+  "pillars": [
+    {
+      "id": "pillar-launch",
+      "title": "Land the launch",
+      "description": "Ship the WiSE GA launch on time, with every market, channel and seller ready on day one."
+    },
+    {
+      "id": "pillar-positioning",
+      "title": "Win the message",
+      "description": "One messaging house, adopted everywhere — so every customer conversation sounds like Sage at its best."
+    },
+    {
+      "id": "pillar-intel",
+      "title": "Know the market",
+      "description": "Always-on competitive and customer intelligence that shapes product, pricing and positioning decisions."
+    },
+    {
+      "id": "pillar-alignment",
+      "title": "Operate as one",
+      "description": "Priorities, progress and decisions visible in one place — zero status decks, zero surprises."
+    }
+  ],
+  "seniorOkrs": [
+    {
+      "id": "so1",
+      "title": "Deliver a top-3 Sage launch of FY26",
+      "owner": "diego",
+      "level": "Senior leadership",
+      "pillar": "pillar-launch",
+      "keyResults": [
+        { "id": "so1-kr1", "title": "GA on 22 Sep with all tier-1 markets live", "progress": 55, "confidence": "on-track", "history": [ { "date": "2026-07-06", "progress": 25 }, { "date": "2026-07-20", "progress": 40 }, { "date": "2026-08-03", "progress": 55 } ] },
+        { "id": "so1-kr2", "title": "Launch sourced pipeline ≥ £2m in first 60 days", "progress": 10, "confidence": "on-track", "history": [ { "date": "2026-07-06", "progress": 0 }, { "date": "2026-08-03", "progress": 10 } ] }
+      ]
+    },
+    {
+      "id": "so2",
+      "title": "Prove the hub as the PMM operating model",
+      "owner": "diego",
+      "level": "Senior leadership",
+      "pillar": "pillar-alignment",
+      "keyResults": [
+        { "id": "so2-kr1", "title": "Pilot team runs 100% of status reporting from the hub", "progress": 40, "confidence": "on-track", "history": [ { "date": "2026-07-06", "progress": 0 }, { "date": "2026-07-20", "progress": 20 }, { "date": "2026-08-03", "progress": 40 } ] },
+        { "id": "so2-kr2", "title": "Roll out to the full WiSE PMM team by end of Q1 FY27", "progress": 0, "confidence": "on-track", "history": [ { "date": "2026-08-03", "progress": 0 } ] }
+      ]
+    }
+  ]
+}
