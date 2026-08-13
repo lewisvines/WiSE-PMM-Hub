@@ -236,6 +236,17 @@ for i in RM.get('initiatives', []):
     if i.get('status') != 'done' and not i.get('nextSteps'):
         warn(f"roadmap: {i['id']} has no next steps recorded")
 
+for e in RM.get('events', []):
+    if e.get('row') not in rm_rows:
+        err(f"roadmap: event {e.get('id')} row '{e.get('row')}' is not in roadmap.rows")
+    if not is_date(e.get('start', '')): err(f"roadmap: event {e.get('id')} bad start date")
+    if e.get('end') and not is_date(e['end']): err(f"roadmap: event {e.get('id')} bad end date")
+    if e.get('end') and is_date(e.get('start','')) and e['end'] < e['start']:
+        err(f"roadmap: event {e.get('id')} ends before it starts")
+    if not e.get('name'): err(f"roadmap: event {e.get('id')} has no name")
+    if not e.get('source'): warn(f"roadmap: event {e.get('id')} has no source — mark it verified or sample")
+
+
 # --- digests ---
 for g in D['digests']['digests']:
     if g['status'] not in ('success','partial','failed'): err(f"digests: {g['id']} invalid status")
