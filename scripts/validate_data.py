@@ -14,7 +14,7 @@ def err(msg): errors.append(msg)
 def warn(msg): warnings.append(msg)
 
 FILES = ['config','team','goals','priorities','updates','challenges','decisions',
-         'digests','strategy','countries','assets','insights','actions']
+         'digests','strategy','countries','assets','insights','actions','roadmap']
 D = {}
 for f in FILES:
     p = ROOT / 'data' / f'{f}.json'
@@ -201,6 +201,40 @@ for c in D['countries']['countries']:
             err(f"countries: {c['id']} stakeholder '{s.get('name')}' invalid influence")
         if s.get('relationship') and s['relationship'] not in ('strong','developing','gap'):
             err(f"countries: {c['id']} stakeholder '{s.get('name')}' invalid relationship")
+
+
+# --- roadmap ---
+RM = D['roadmap']
+rm_rows = set(RM.get('rows', []))
+if 'wise' not in rm_rows:
+    warn("roadmap: no 'wise' programme row configured")
+for r in rm_rows:
+    if r != 'wise' and r not in countries:
+        err(f"roadmap: row '{r}' is not a country id or 'wise'")
+rm_ids = set()
+for i in RM.get('initiatives', []):
+    if i['id'] in rm_ids: err(f"roadmap: duplicate initiative id '{i['id']}'")
+    rm_ids.add(i['id'])
+    if i.get('row') not in rm_rows:
+        err(f"roadmap: {i['id']} row '{i.get('row')}' is not in roadmap.rows")
+    check_person('roadmap', i['id'], 'owner', i['owner'])
+    if i.get('status') not in ('planned', 'on-track', 'at-risk', 'blocked', 'done'):
+        err(f"roadmap: {i['id']} invalid status '{i.get('status')}'")
+    if not is_date(i.get('start', '')): err(f"roadmap: {i['id']} bad start date")
+    if not is_date(i.get('end', '')): err(f"roadmap: {i['id']} bad end date")
+    if is_date(i.get('start', '')) and is_date(i.get('end', '')) and i['end'] < i['start']:
+        err(f"roadmap: {i['id']} ends before it starts")
+    if not (0 <= i.get('progress', 0) <= 100): err(f"roadmap: {i['id']} progress out of range")
+    if i.get('workstream') and i['workstream'] not in workstreams:
+        err(f"roadmap: {i['id']} unknown workstream '{i['workstream']}'")
+    if i.get('lastReviewed') and not is_date(i['lastReviewed']): err(f"roadmap: {i['id']} bad lastReviewed")
+    if i.get('reviewedBy'): check_person('roadmap', i['id'], 'reviewedBy', i['reviewedBy'])
+    if i.get('linkedGoal') and i['linkedGoal'] not in goal_ids:
+        warn(f"roadmap: {i['id']} linkedGoal '{i['linkedGoal']}' not found")
+    for s in i.get('nextSteps', []):
+        if 'text' not in s: err(f"roadmap: {i['id']} has a next step with no text")
+    if i.get('status') != 'done' and not i.get('nextSteps'):
+        warn(f"roadmap: {i['id']} has no next steps recorded")
 
 # --- digests ---
 for g in D['digests']['digests']:
