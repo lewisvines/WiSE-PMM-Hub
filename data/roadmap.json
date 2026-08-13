@@ -1,9 +1,16 @@
 {
-  "_comment": "SAMPLE DATA — the 18-month WiSE roadmap. The dashboard draws six rolling fiscal quarters starting from the quarter containing today, so the timeline advances by itself. `rows` sets the order of swimlanes: 'wise' is the programme-wide lane, the rest are country ids from countries.json. Each initiative is a bar (start→end) or a milestone (start === end). Codex maintains `status`, `progress`, `progressNote`, `nextSteps`, `lastReviewed` and `reviewedBy` from sourced signals (meetings, Teams, email, roadmap docs) — it never invents dates: `start`/`end` changes need a sourced commitment. Humans add and remove initiatives (via the Add initiative issue) and always win on conflict.",
+  "_comment": "SAMPLE DATA — the WiSE roadmap. The dashboard draws the next `monthsShown` months month by month, then `quartersAfter` fiscal quarters, so the near term is legible and the far term stays simple. The window rolls forward on its own. `rows` sets the swimlane order: 'wise' is the programme-wide lane, the rest are country ids from countries.json. Each initiative is a bar (start→end) or a milestone (start === end). `events` are fixed industry dates shown in the Key events band. Codex maintains initiative `status`, `progress`, `progressNote`, `nextSteps`, `lastReviewed` and `reviewedBy` from sourced signals — it never invents dates: `start`/`end` changes need a sourced commitment. Humans add and remove initiatives and events (via the Add initiative issue) and always win on conflict.",
   "fiscalYearStartMonth": 10,
-  "quartersShown": 6,
-  "rows": ["wise", "fr", "es", "pt", "de"],
-  "rowLabels": { "wise": "WiSE programme" },
+  "rows": [
+    "wise",
+    "fr",
+    "es",
+    "pt",
+    "de"
+  ],
+  "rowLabels": {
+    "wise": "WiSE programme"
+  },
   "statusLegend": {
     "planned": "Scheduled, not started",
     "on-track": "In flight, on plan",
@@ -25,9 +32,18 @@
       "progress": 62,
       "progressNote": "Readiness checklist at 62%. Environment sign-offs complete; enablement is the remaining gap.",
       "nextSteps": [
-        { "text": "Close tier-1 asset sign-off by 4 Sept", "done": false },
-        { "text": "Confirm interim enablement delivery with L&D", "done": false },
-        { "text": "Press and analyst pre-brief scheduled", "done": true }
+        {
+          "text": "Close tier-1 asset sign-off by 4 Sept",
+          "done": false
+        },
+        {
+          "text": "Confirm interim enablement delivery with L&D",
+          "done": false
+        },
+        {
+          "text": "Press and analyst pre-brief scheduled",
+          "done": true
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "lewis",
@@ -46,8 +62,14 @@
       "progress": 45,
       "progressNote": "Modules 1–2 built. L&D platform migration slipped two weeks, so go-live date is under pressure.",
       "nextSteps": [
-        { "text": "Decide interim delivery route (Teams live vs shift date)", "done": false },
-        { "text": "Build modules 3–5", "done": false }
+        {
+          "text": "Decide interim delivery route (Teams live vs shift date)",
+          "done": false
+        },
+        {
+          "text": "Build modules 3–5",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "lewis",
@@ -67,8 +89,14 @@
       "progress": 10,
       "progressNote": "Creative brief drafted, media plan pending budget phasing decision.",
       "nextSteps": [
-        { "text": "Resolve budget phasing decision d3", "done": false },
-        { "text": "Brief agency once envelope confirmed", "done": false }
+        {
+          "text": "Resolve budget phasing decision d3",
+          "done": false
+        },
+        {
+          "text": "Brief agency once envelope confirmed",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-02",
       "reviewedBy": "diego"
@@ -86,7 +114,10 @@
       "progress": 0,
       "progressNote": "Targets the top NPS detractor theme (reporting depth). Product date confirmed, PMM plan not started.",
       "nextSteps": [
-        { "text": "Agree positioning with product marketing council", "done": false }
+        {
+          "text": "Agree positioning with product marketing council",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-07-31",
       "reviewedBy": "lewis"
@@ -104,12 +135,14 @@
       "progress": 0,
       "progressNote": "Six months post-GA checkpoint across all live markets.",
       "nextSteps": [
-        { "text": "Define success measures before Q3 FY27", "done": false }
+        {
+          "text": "Define success measures before Q3 FY27",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-07-21",
       "reviewedBy": "diego"
     },
-
     {
       "id": "r-fr-01",
       "row": "fr",
@@ -123,7 +156,10 @@
       "progress": 85,
       "progressNote": "Product on track for the 1 Sept regulatory date; comms assets in final review.",
       "nextSteps": [
-        { "text": "Publish readiness FAQ 48h before mandate", "done": false }
+        {
+          "text": "Publish readiness FAQ 48h before mandate",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-10",
       "reviewedBy": "anais"
@@ -141,8 +177,14 @@
       "progress": 40,
       "progressNote": "Wave one live. Competitor D is bidding hard on the same search terms with overstated claims.",
       "nextSteps": [
-        { "text": "Ship compliance-readiness index as demand asset", "done": false },
-        { "text": "Counter-messaging brief to paid team", "done": false }
+        {
+          "text": "Ship compliance-readiness index as demand asset",
+          "done": false
+        },
+        {
+          "text": "Counter-messaging brief to paid team",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-10",
       "reviewedBy": "anais"
@@ -160,8 +202,14 @@
       "progress": 50,
       "progressNote": "Registration at ~50% with the mandate under 8 weeks away. Pace needs to roughly double.",
       "nextSteps": [
-        { "text": "Weekly registration tracking into this hub", "done": false },
-        { "text": "Targeted outreach to unregistered accountant base", "done": false }
+        {
+          "text": "Weekly registration tracking into this hub",
+          "done": false
+        },
+        {
+          "text": "Targeted outreach to unregistered accountant base",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-13",
       "reviewedBy": "anais"
@@ -179,12 +227,14 @@
       "progress": 30,
       "progressNote": "Compliance-led launch narrative agreed with the advisory board.",
       "nextSteps": [
-        { "text": "Localised enablement content — depends on UK path", "done": false }
+        {
+          "text": "Localised enablement content — depends on UK path",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "lewis"
     },
-
     {
       "id": "r-es-01",
       "row": "es",
@@ -198,8 +248,14 @@
       "progress": 0,
       "progressNote": "Not yet scheduled with the local agency. Blocks the website refresh and the autónomos campaign.",
       "nextSteps": [
-        { "text": "Book agency slot for localisation sprint", "done": false },
-        { "text": "Confirm reviewer from Spain marketing", "done": false }
+        {
+          "text": "Book agency slot for localisation sprint",
+          "done": false
+        },
+        {
+          "text": "Confirm reviewer from Spain marketing",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "zoraida"
@@ -217,7 +273,10 @@
       "progress": 35,
       "progressNote": "Two sessions delivered. Channel sentiment still recovering from the spring pricing change.",
       "nextSteps": [
-        { "text": "Land channel sentiment recovery plan with sales", "done": false }
+        {
+          "text": "Land channel sentiment recovery plan with sales",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-01",
       "reviewedBy": "zoraida"
@@ -235,7 +294,10 @@
       "progress": 25,
       "progressNote": "Launch date holds, but messaging localisation is the critical path.",
       "nextSteps": [
-        { "text": "Unblock localisation to protect the date", "done": false }
+        {
+          "text": "Unblock localisation to protect the date",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "lewis"
@@ -253,7 +315,10 @@
       "progress": 0,
       "progressNote": "Advisory board sees autónomos as the fastest entry point if onboarding stays under a day.",
       "nextSteps": [
-        { "text": "Validate onboarding time claim with product", "done": false }
+        {
+          "text": "Validate onboarding time claim with product",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-06-28",
       "reviewedBy": "zoraida"
@@ -271,12 +336,14 @@
       "progress": 0,
       "progressNote": "Corporate VeriFactu obligations land January 2027 — comms plan not started.",
       "nextSteps": [
-        { "text": "Confirm product readiness date with compliance", "done": false }
+        {
+          "text": "Confirm product readiness date with compliance",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-13",
       "reviewedBy": "zoraida"
     },
-
     {
       "id": "r-pt-01",
       "row": "pt",
@@ -290,7 +357,10 @@
       "progress": 0,
       "progressNote": "Cannot start until the Spanish messaging house is complete — single upstream dependency.",
       "nextSteps": [
-        { "text": "Sequence PT immediately after ES sign-off", "done": false }
+        {
+          "text": "Sequence PT immediately after ES sign-off",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "zoraida"
@@ -308,7 +378,10 @@
       "progress": 0,
       "progressNote": "Target is two flagship contabilista partnerships signed before launch.",
       "nextSteps": [
-        { "text": "Shortlist practices with the local sales lead", "done": false }
+        {
+          "text": "Shortlist practices with the local sales lead",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-07-15",
       "reviewedBy": "zoraida"
@@ -326,7 +399,10 @@
       "progress": 15,
       "progressNote": "One week behind Spain by design; inherits the Spanish localisation risk.",
       "nextSteps": [
-        { "text": "Confirm shared asset pack handover from ES", "done": false }
+        {
+          "text": "Confirm shared asset pack handover from ES",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "lewis"
@@ -344,13 +420,18 @@
       "progress": 10,
       "progressNote": "Full SAF-T accounting requirement lands January 2027; certified-invoicing compliance is our sharpest local differentiator.",
       "nextSteps": [
-        { "text": "Build compliance proof points with product", "done": false },
-        { "text": "Brief contabilistas ahead of the deadline", "done": false }
+        {
+          "text": "Build compliance proof points with product",
+          "done": false
+        },
+        {
+          "text": "Brief contabilistas ahead of the deadline",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-13",
       "reviewedBy": "zoraida"
     },
-
     {
       "id": "r-de-01",
       "row": "de",
@@ -364,8 +445,14 @@
       "progress": 55,
       "progressNote": "Evidence pack building. Steuerberater channel dynamics are the decisive input.",
       "nextSteps": [
-        { "text": "Complete competitor deep-dive on the domestic incumbent", "done": false },
-        { "text": "Interview five Steuerberater practices", "done": false }
+        {
+          "text": "Complete competitor deep-dive on the domestic incumbent",
+          "done": false
+        },
+        {
+          "text": "Interview five Steuerberater practices",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-01",
       "reviewedBy": "diego"
@@ -383,7 +470,10 @@
       "progress": 20,
       "progressNote": "No dedicated PMM in market; coverage gap ahead of the entry review.",
       "nextSteps": [
-        { "text": "Confirm role sign-off with HR", "done": false }
+        {
+          "text": "Confirm role sign-off with HR",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-03",
       "reviewedBy": "diego"
@@ -401,7 +491,10 @@
       "progress": 0,
       "progressNote": "Decision point for German market entry, informed by the research programme.",
       "nextSteps": [
-        { "text": "Circulate evidence pack one week before review", "done": false }
+        {
+          "text": "Circulate evidence pack one week before review",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-06-20",
       "reviewedBy": "diego"
@@ -419,7 +512,10 @@
       "progress": 0,
       "progressNote": "Advisory counsel is explicit: do not launch without an endorsement strategy in place.",
       "nextSteps": [
-        { "text": "Only starts on a 'go' at the November review", "done": false }
+        {
+          "text": "Only starts on a 'go' at the November review",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-06-10",
       "reviewedBy": "diego"
@@ -437,10 +533,87 @@
       "progress": 0,
       "progressNote": "German e-invoicing mandate obligations begin January 2028 — readiness window opens mid-FY27.",
       "nextSteps": [
-        { "text": "Track mandate detail through the intel feed", "done": false }
+        {
+          "text": "Track mandate detail through the intel feed",
+          "done": false
+        }
       ],
       "lastReviewed": "2026-08-13",
       "reviewedBy": "diego"
+    }
+  ],
+  "monthsShown": 6,
+  "quartersAfter": 4,
+  "events": [
+    {
+      "id": "e-fr-01",
+      "row": "fr",
+      "name": "81e Congrès de l'Ordre des experts-comptables",
+      "start": "2026-09-16",
+      "end": "2026-09-18",
+      "location": "Paris Expo, Porte de Versailles",
+      "why": "The French profession's flagship congress — lands two weeks before the France launch wave and days after the e-invoicing mandate.",
+      "source": "evenements.experts-comptables.org (verified)"
+    },
+    {
+      "id": "e-pt-01",
+      "row": "pt",
+      "name": "8.º Congresso dos Contabilistas Certificados",
+      "start": "2026-09-22",
+      "end": "2026-09-24",
+      "location": "Ordem dos Contabilistas Certificados",
+      "why": "Portugal's main contabilistas gathering — the window to land partner conversations before the Portugal wave.",
+      "source": "occ.pt (verified)"
+    },
+    {
+      "id": "e-de-01",
+      "row": "de",
+      "name": "Deutscher Steuerberatertag",
+      "start": "2026-10-04",
+      "end": "2026-10-06",
+      "location": "Bonn",
+      "why": "Primary Steuerberater audience — evidence-gathering opportunity ahead of the November market entry review.",
+      "source": "steuerberatertag.de (verified)"
+    },
+    {
+      "id": "e-es-01",
+      "row": "es",
+      "name": "Accountex España",
+      "start": "2026-11-18",
+      "end": "2026-11-19",
+      "location": "IFEMA Madrid",
+      "why": "Spain's reference event for asesorías and gestorías — first major post-launch moment for the Spain wave.",
+      "source": "ifema.es (verified)"
+    },
+    {
+      "id": "e-es-02",
+      "row": "es",
+      "name": "Sage Sessions Madrid",
+      "start": "2026-09-17",
+      "end": "2026-09-17",
+      "location": "Madrid",
+      "why": "Sage's own customer event in market.",
+      "source": "internal (sample)"
+    },
+    {
+      "id": "e-fr-02",
+      "row": "fr",
+      "name": "Sage Sessions Paris",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "location": "Paris",
+      "why": "Sage's own customer event in market.",
+      "source": "internal (sample)"
+    },
+    {
+      "id": "e-wise-01",
+      "row": "wise",
+      "name": "Sage Sessions London",
+      "start": "2026-09-10",
+      "end": "2026-09-10",
+      "location": "London",
+      "why": "Runs 12 days before GA — the last big stage before launch.",
+      "source": "internal (sample)"
     }
   ]
 }
