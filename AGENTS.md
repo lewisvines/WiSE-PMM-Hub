@@ -187,6 +187,9 @@ This is the team's accountability view, so accuracy matters more than coverage.
   "[roadmap] Add initiative" issue; fold those in, then close the issue with a
   comment naming the id you created.
 - reorder `rows` or edit `statusLegend`.
+- `events` (the Key events band) are human-maintained. If a source clearly states
+  that an industry event has moved or been cancelled, do not edit it — raise it in
+  `needsHuman` as "event date changed: <name>" with the source.
 
 An initiative that has had no sourced signal for 30 days should be listed in
 your digest's `needsHuman` as "roadmap review due" rather than silently ageing.
