@@ -20,6 +20,6 @@
   "intelHub": {
     "label": "WiSE Intel Hub",
     "url": "https://lewisvines.github.io/wise-intel-hub/",
-    "note": "Embedded from the wise-intel-hub GitHub Pages site. Change url here if the Intel Hub moves (e.g. to its Netlify address)."
+    "note": "The Intel tab reads this site's signals.json directly and renders every signal inside the hub's own layout — it is a data feed, not an embedded site. `url` locates the feed (url + 'signals.json') and powers the 'Source site' link; set `dataUrl` to override the feed location."
   }
 }
