@@ -422,6 +422,17 @@
   .whocard .avatar { width:38px; height:38px; margin-bottom:8px; }
   .whot { font-size:15px; font-weight:700; }
   .whor { font-size:13px; color:var(--ink-2); }
+  .intel-modes button { font-size:13.5px; }
+  .areabar { display:flex; gap:22px; flex-wrap:wrap; background:var(--surface-1); border:1px solid var(--ring); border-radius:20px;
+    padding:16px 20px; margin-bottom:16px; box-shadow:0 1px 2px rgba(10,18,10,0.05), 0 10px 28px rgba(10,18,10,0.06); }
+  :root[data-theme="dark"] .areabar { box-shadow:none; }
+  .areagroup-t { font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); margin-bottom:8px; }
+  .areachips { display:flex; gap:6px; flex-wrap:wrap; max-width:430px; }
+  .areachip { border:1px solid var(--ring); background:none; color:var(--ink-2); border-radius:999px; padding:6px 13px;
+    font-size:13px; font-family:inherit; cursor:pointer; transition:all .14s ease; }
+  .areachip:hover { border-color:var(--accent); color:var(--accent-text); }
+  .areachip.on { background:var(--ink-1); border-color:var(--ink-1); color:var(--surface-1); font-weight:600; }
+  .iframe-wrap.embed { height:calc(100vh - 300px); min-height:560px; }
 </style>
 </head>
 <body>
@@ -2015,6 +2026,54 @@ STEP 4 — Log one digests.json entry (agent: "roadmap-watcher"). Commit: "hub: 
   // ---------- Intel: rendered natively from the intel hub's signals feed ----------
   let intelData = null, intelState = 'idle', intelErr = '';
   let intelFilters = { market: '', category: '', priority: '', q: '' };
+  let intelMode = 'signals', intelPage = 'dashboard';
+  // The intel site's own areas, surfaced as hub navigation. `id` is the page id
+  // inside the intel site; the hub drives it directly (same origin) and hides
+  // that site's chrome so it reads as one product.
+  const INTEL_AREAS = [
+    ['Intelligence', [['dashboard','Dashboard'],['battle-room','Battle Room'],['weekly-brief','Weekly Brief'],['competitors','Competitors'],['ai-watch','AI Watch'],['hiring','Hiring Signals'],['brand','Brand Positioning'],['regulatory','Regulatory Calendar']]],
+    ['Markets', [['country-fr','France'],['country-es','Spain'],['country-de','Germany'],['country-pt','Portugal'],['country-uk','United Kingdom'],['country-us','United States']]],
+    ['Products', [['products','Products Overview'],['accountant-personas','Accountant Personas'],['smb-segments','SMB Segments']]],
+    ['Sales tools', [['battlecards','Battle Cards'],['deal-intel','Deal Intelligence'],['campaign-alerts','Campaign Alerts'],['sales-enablement','Sales Enablement']]],
+    ['Strategy', [['messaging-library','Messaging Library'],['win-loss','Win / Loss Intel'],['campaign-calendar','Campaign Calendar'],['competitor-compare','Competitor Compare']]],
+    ['PMM toolkit', [['smb-direct','SMB Direct Playbook'],['5ds','5Ds Framework'],['craft-skills','Craft Skills'],['methodology','Methodology']]]
+  ];
+  const intelPageLabel = id => { for (const [, items] of INTEL_AREAS) { const f = items.find(x => x[0] === id); if (f) return f[1]; } return id; };
+  function intelSiteUrl() {
+    const hub = cfg.intelHub || {};
+    if (hub.pageUrl) return hub.pageUrl;
+    if (!hub.url) return null;
+    return hub.url.replace(/\/?$/, '/') + 'src_index.html';
+  }
+  // Strip the embedded site's own nav/header and show the requested area, so it
+  // renders as a section of this hub rather than a site inside a site.
+  function mountIntelFrame() {
+    const f = document.getElementById('intelFrame');
+    if (!f) return;
+    const apply = () => {
+      try {
+        const doc = f.contentDocument;
+        if (!doc || !f.contentWindow) throw new Error('no access');
+        if (!doc.getElementById('hub-embed-style')) {
+          const st = doc.createElement('style');
+          st.id = 'hub-embed-style';
+          st.textContent = '#sidebar,#topbar,#progress{display:none!important}' +
+            '#main{margin-left:0!important;padding:0 2px 28px!important;width:100%!important;max-width:none!important}' +
+            'body{background:transparent!important}';
+          (doc.head || doc.documentElement).appendChild(st);
+        }
+        if (typeof f.contentWindow.showPage === 'function') f.contentWindow.showPage(intelPage);
+        f.contentWindow.scrollTo(0, 0);
+        const note = document.getElementById('intelFrameNote');
+        if (note) note.textContent = intelPageLabel(intelPage) + ' — live from the ' + (cfg.intelHub.label || 'intel hub') + ' feed.';
+      } catch (e) {
+        const note = document.getElementById('intelFrameNote');
+        if (note) note.innerHTML = 'This area is served by the intel site and could not be opened inside the hub. ' +
+          (cfg.intelHub.url ? '<a class="ghlink" target="_blank" rel="noopener" href="' + esc(cfg.intelHub.url) + '">Open it directly</a>' : '');
+      }
+    };
+    if (f.dataset.ready) apply(); else f.addEventListener('load', () => { f.dataset.ready = '1'; apply(); });
+  }
 
   function intelUrl() {
     const hub = cfg.intelHub || {};
@@ -2066,6 +2125,37 @@ STEP 4 — Log one digests.json entry (agent: "roadmap-watcher"). Commit: "hub: 
     </div>`;
   }
 
+  function intelModeBar() {
+    return `<div class="seg intel-modes">
+      <button class="${intelMode === 'signals' ? 'on' : ''}" data-imode="signals">Signals feed</button>
+      <button class="${intelMode === 'library' ? 'on' : ''}" data-imode="library">Intel library</button>
+    </div>`;
+  }
+  function renderIntelLibrary() {
+    const hub = cfg.intelHub || {};
+    const src = intelSiteUrl();
+    return `
+      <div class="intel-head">
+        <div>
+          <h2 class="sect" style="margin:0">Market intelligence</h2>
+          <div class="feed-src" style="margin-top:4px" id="intelFrameNote">Loading ${esc(intelPageLabel(intelPage))}…</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          ${intelModeBar()}
+          ${hub.url ? `<a class="qbtn" target="_blank" rel="noopener" href="${esc(hub.url)}">Source site</a>` : ''}
+        </div>
+      </div>
+      <div class="areabar">
+        ${INTEL_AREAS.map(([group, items]) => `<div class="areagroup">
+          <div class="areagroup-t">${esc(group)}</div>
+          <div class="areachips">${items.map(([id, label]) =>
+            `<button class="areachip ${intelPage === id ? 'on' : ''}" data-ipage="${esc(id)}">${esc(label)}</button>`).join('')}</div>
+        </div>`).join('')}
+      </div>
+      ${src ? `<div class="iframe-wrap embed"><iframe id="intelFrame" src="${esc(src)}" title="${esc(hub.label || 'Intel')}" loading="lazy"></iframe></div>`
+            : '<div class="card"><div class="empty">No intel site configured.</div></div>'}`;
+  }
+
   function renderIntel() {
     const hub = cfg.intelHub || {};
     if (!intelUrl()) return `
@@ -2074,6 +2164,7 @@ STEP 4 — Log one digests.json entry (agent: "roadmap-watcher"). Commit: "hub: 
         <div class="v">Connect your intel feed to light up this tab.</div>
         <div class="n">Set <code>intelHub.url</code> in <code>data/config.json</code> to the Intel Hub address. The hub reads its <code>signals.json</code> and renders every signal here, in this hub's own layout — no embedded site, no second login.</div>
       </div>`;
+    if (intelMode === 'library') return renderIntelLibrary();
     if (intelState === 'idle') { loadIntel(); }
     if (intelState === 'idle' || intelState === 'loading') return `
       <div class="intel-head"><h2 class="sect" style="margin:0">Market intelligence</h2></div>
@@ -2116,7 +2207,8 @@ STEP 4 — Log one digests.json entry (agent: "roadmap-watcher"). Commit: "hub: 
           <h2 class="sect" style="margin:0">Market intelligence</h2>
           <div class="feed-src" style="margin-top:4px">${esc(meta.week_label || '')}${scanned ? ' · last scan ' + fmtDate(scanned) : ''}${meta.signal_count ? ' · ' + all.length + ' signals' : ''}</div>
         </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          ${intelModeBar()}
           <button class="qbtn" data-intel-retry>Refresh</button>
           ${hub.url ? `<a class="qbtn" target="_blank" rel="noopener" href="${esc(hub.url)}">Source site</a>` : ''}
         </div>
@@ -2388,6 +2480,13 @@ STEP 4 — Log one digests.json entry (agent: "roadmap-watcher"). Commit: "hub: 
     document.querySelectorAll('[data-setuser]').forEach(el =>
       el.addEventListener('click', () => { const sel = document.getElementById('userSelect');
         if (sel) { sel.value = el.dataset.setuser; sel.dispatchEvent(new Event('change')); } }));
+    document.querySelectorAll('[data-imode]').forEach(el =>
+      el.addEventListener('click', () => { intelMode = el.dataset.imode; render(); }));
+    document.querySelectorAll('[data-ipage]').forEach(el =>
+      el.addEventListener('click', () => { intelPage = el.dataset.ipage;
+        document.querySelectorAll('[data-ipage]').forEach(x => x.classList.toggle('on', x === el));
+        mountIntelFrame(); }));
+    if (active === 'intel' && intelMode === 'library') mountIntelFrame();
     document.querySelectorAll('[data-intel-market]').forEach(el =>
       el.addEventListener('click', () => { intelFilters = { market: el.dataset.intelMarket, category:'', priority:'', q:'' };
         active = 'intel'; drill = null; location.hash = 'intel'; render(); window.scrollTo({ top: 0 }); }));
