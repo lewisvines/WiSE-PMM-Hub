@@ -2058,12 +2058,19 @@ STEP 4 — Log one digests.json entry (agent: "roadmap-watcher"). Commit: "hub: 
           const st = doc.createElement('style');
           st.id = 'hub-embed-style';
           st.textContent = '#sidebar,#topbar,#progress{display:none!important}' +
-            '#main{margin-left:0!important;padding:0 2px 28px!important;width:100%!important;max-width:none!important}' +
+            '#main{position:static!important;left:0!important;right:auto!important;top:auto!important;bottom:auto!important;' +
+            'margin:0!important;padding:0 2px 28px!important;width:100%!important;max-width:none!important;' +
+            'height:auto!important;overflow:visible!important}' +
             'body{background:transparent!important}';
           (doc.head || doc.documentElement).appendChild(st);
         }
-        if (typeof f.contentWindow.showPage === 'function') f.contentWindow.showPage(intelPage);
-        f.contentWindow.scrollTo(0, 0);
+        const w = f.contentWindow;
+        if (typeof w.showPage === 'function') w.showPage(intelPage);
+        // the intel site initialises countdowns and widgets on its own load path;
+        // re-run the safe ones so embedded pages render complete
+        ['updateCountdowns','renderScanHealth','renderTrendPulse','initTabs','renderCraftSummary','initBattleRoom']
+          .forEach(fn => { try { if (typeof w[fn] === 'function') w[fn](); } catch (e) {} });
+        w.scrollTo(0, 0);
         const note = document.getElementById('intelFrameNote');
         if (note) note.textContent = intelPageLabel(intelPage) + ' — live from the ' + (cfg.intelHub.label || 'intel hub') + ' feed.';
       } catch (e) {
