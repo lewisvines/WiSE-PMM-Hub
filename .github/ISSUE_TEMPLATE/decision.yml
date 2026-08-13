@@ -1,0 +1,36 @@
+name: Decision
+description: A decision needed or made, tracked in the hub (data/decisions.json)
+title: "[dXX] "
+labels: ["decision"]
+body:
+  - type: input
+    id: decision-id
+    attributes:
+      label: Decision id
+      description: The id in data/decisions.json (e.g. d5)
+      placeholder: d5
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options: [pending, decided]
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What needs deciding (or was decided), by when, and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options on the table
+  - type: input
+    id: owner
+    attributes:
+      label: Decision owner
+      placeholder: e.g. diego

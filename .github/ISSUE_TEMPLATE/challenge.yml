@@ -1,0 +1,37 @@
+name: Challenge
+description: A risk or blocker tracked in the hub (data/challenges.json)
+title: "[cXX] "
+labels: ["challenge"]
+body:
+  - type: input
+    id: challenge-id
+    attributes:
+      label: Challenge id
+      description: The id in data/challenges.json (e.g. c5)
+      placeholder: c5
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: [low, medium, high, critical]
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What's the challenge?
+      description: What is blocked or at risk, and what's the consequence?
+    validations:
+      required: true
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigation options
+      description: Known options or asks. Leave blank if none yet.
+  - type: input
+    id: related
+    attributes:
+      label: Related goal/milestone
+      placeholder: e.g. m3, o1-kr2
