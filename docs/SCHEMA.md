@@ -148,6 +148,33 @@ trackers: `id` (`a-YYYYMMDD-nn`), `date`, `owner` (person id), `action`,
 optional `due`, `status` (`open` | `done` | `dropped`), `source`, `sourceRef`
 (which meeting/thread), `addedBy`, optional `linkedGoal`.
 
+
+## roadmap.json
+
+The 18-month WiSE roadmap shown on the Overview. The dashboard draws six rolling
+fiscal quarters starting from the quarter containing today, so the window moves
+forward on its own — no yearly rebuild.
+
+| Field | Type | Notes |
+|---|---|---|
+| `fiscalYearStartMonth` | int | 10 for Sage (FY starts in October) |
+| `quartersShown` | int | 6 = 18 months |
+| `rows` | string[] | Swimlane order: `wise` (programme-wide) plus country ids |
+| `rowLabels` | object | Optional display names for non-country rows |
+| `statusLegend` | object | status → plain-English meaning, rendered as the legend |
+
+`initiatives[]`: `id` (`r-<row>-nn`), `row` (must appear in `rows`), `title`,
+`type` (`launch` | `campaign` | `regulatory` | `enablement` | `research` |
+`milestone`), `start` and `end` (YYYY-MM-DD — equal dates render as a milestone
+diamond), `status` (`planned` | `on-track` | `at-risk` | `blocked` | `done`),
+`owner` (person id), `workstream`, `progress` (0–100), `progressNote` ("where we
+are up to"), `nextSteps[]` (`{text, done}` — "what needs to be done"),
+`lastReviewed` (YYYY-MM-DD), `reviewedBy` (person id), and optional
+`linkedGoal` / `linkedChallenge`.
+
+Bars past their `end` date that aren't `done` are outlined as overdue by the
+dashboard — that flag is derived, never stored.
+
 ## digests.json
 
 `digests[]`, newest first, one per agent run: `id` (`dig-YYYYMMDD-am|pm`),
