@@ -1,0 +1,446 @@
+{
+  "_comment": "SAMPLE DATA — the 18-month WiSE roadmap. The dashboard draws six rolling fiscal quarters starting from the quarter containing today, so the timeline advances by itself. `rows` sets the order of swimlanes: 'wise' is the programme-wide lane, the rest are country ids from countries.json. Each initiative is a bar (start→end) or a milestone (start === end). Codex maintains `status`, `progress`, `progressNote`, `nextSteps`, `lastReviewed` and `reviewedBy` from sourced signals (meetings, Teams, email, roadmap docs) — it never invents dates: `start`/`end` changes need a sourced commitment. Humans add and remove initiatives (via the Add initiative issue) and always win on conflict.",
+  "fiscalYearStartMonth": 10,
+  "quartersShown": 6,
+  "rows": ["wise", "fr", "es", "pt", "de"],
+  "rowLabels": { "wise": "WiSE programme" },
+  "statusLegend": {
+    "planned": "Scheduled, not started",
+    "on-track": "In flight, on plan",
+    "at-risk": "In flight, needs attention",
+    "blocked": "Stopped, waiting on something",
+    "done": "Complete"
+  },
+  "initiatives": [
+    {
+      "id": "r-wise-01",
+      "row": "wise",
+      "title": "WiSE GA launch",
+      "type": "milestone",
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "status": "on-track",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "progress": 62,
+      "progressNote": "Readiness checklist at 62%. Environment sign-offs complete; enablement is the remaining gap.",
+      "nextSteps": [
+        { "text": "Close tier-1 asset sign-off by 4 Sept", "done": false },
+        { "text": "Confirm interim enablement delivery with L&D", "done": false },
+        { "text": "Press and analyst pre-brief scheduled", "done": true }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "lewis",
+      "linkedGoal": "m6"
+    },
+    {
+      "id": "r-wise-02",
+      "row": "wise",
+      "title": "Sales enablement path live",
+      "type": "enablement",
+      "start": "2026-07-01",
+      "end": "2026-08-21",
+      "status": "at-risk",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "progress": 45,
+      "progressNote": "Modules 1–2 built. L&D platform migration slipped two weeks, so go-live date is under pressure.",
+      "nextSteps": [
+        { "text": "Decide interim delivery route (Teams live vs shift date)", "done": false },
+        { "text": "Build modules 3–5", "done": false }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "lewis",
+      "linkedGoal": "m3",
+      "linkedChallenge": "c3"
+    },
+    {
+      "id": "r-wise-03",
+      "row": "wise",
+      "title": "Launch campaign — 'Work smarter'",
+      "type": "campaign",
+      "start": "2026-09-15",
+      "end": "2026-12-15",
+      "status": "planned",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "progress": 10,
+      "progressNote": "Creative brief drafted, media plan pending budget phasing decision.",
+      "nextSteps": [
+        { "text": "Resolve budget phasing decision d3", "done": false },
+        { "text": "Brief agency once envelope confirmed", "done": false }
+      ],
+      "lastReviewed": "2026-08-02",
+      "reviewedBy": "diego"
+    },
+    {
+      "id": "r-wise-04",
+      "row": "wise",
+      "title": "Post-GA reporting pack v1",
+      "type": "launch",
+      "start": "2026-11-10",
+      "end": "2026-11-10",
+      "status": "planned",
+      "owner": "lewis",
+      "workstream": "launch-gtm",
+      "progress": 0,
+      "progressNote": "Targets the top NPS detractor theme (reporting depth). Product date confirmed, PMM plan not started.",
+      "nextSteps": [
+        { "text": "Agree positioning with product marketing council", "done": false }
+      ],
+      "lastReviewed": "2026-07-31",
+      "reviewedBy": "lewis"
+    },
+    {
+      "id": "r-wise-05",
+      "row": "wise",
+      "title": "Full-market rollout review",
+      "type": "milestone",
+      "start": "2027-04-15",
+      "end": "2027-04-15",
+      "status": "planned",
+      "owner": "diego",
+      "workstream": "strategy-alignment",
+      "progress": 0,
+      "progressNote": "Six months post-GA checkpoint across all live markets.",
+      "nextSteps": [
+        { "text": "Define success measures before Q3 FY27", "done": false }
+      ],
+      "lastReviewed": "2026-07-21",
+      "reviewedBy": "diego"
+    },
+
+    {
+      "id": "r-fr-01",
+      "row": "fr",
+      "title": "E-invoicing module GA",
+      "type": "milestone",
+      "start": "2026-09-01",
+      "end": "2026-09-01",
+      "status": "on-track",
+      "owner": "anais",
+      "workstream": "launch-gtm",
+      "progress": 85,
+      "progressNote": "Product on track for the 1 Sept regulatory date; comms assets in final review.",
+      "nextSteps": [
+        { "text": "Publish readiness FAQ 48h before mandate", "done": false }
+      ],
+      "lastReviewed": "2026-08-10",
+      "reviewedBy": "anais"
+    },
+    {
+      "id": "r-fr-02",
+      "row": "fr",
+      "title": "E-invoicing mandate comms wave",
+      "type": "campaign",
+      "start": "2026-08-15",
+      "end": "2026-10-31",
+      "status": "on-track",
+      "owner": "anais",
+      "workstream": "launch-gtm",
+      "progress": 40,
+      "progressNote": "Wave one live. Competitor D is bidding hard on the same search terms with overstated claims.",
+      "nextSteps": [
+        { "text": "Ship compliance-readiness index as demand asset", "done": false },
+        { "text": "Counter-messaging brief to paid team", "done": false }
+      ],
+      "lastReviewed": "2026-08-10",
+      "reviewedBy": "anais"
+    },
+    {
+      "id": "r-fr-03",
+      "row": "fr",
+      "title": "PA registration drive to 100%",
+      "type": "regulatory",
+      "start": "2026-08-01",
+      "end": "2026-11-30",
+      "status": "at-risk",
+      "owner": "anais",
+      "workstream": "launch-gtm",
+      "progress": 50,
+      "progressNote": "Registration at ~50% with the mandate under 8 weeks away. Pace needs to roughly double.",
+      "nextSteps": [
+        { "text": "Weekly registration tracking into this hub", "done": false },
+        { "text": "Targeted outreach to unregistered accountant base", "done": false }
+      ],
+      "lastReviewed": "2026-08-13",
+      "reviewedBy": "anais"
+    },
+    {
+      "id": "r-fr-04",
+      "row": "fr",
+      "title": "WiSE launch — France wave",
+      "type": "milestone",
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "status": "on-track",
+      "owner": "anais",
+      "workstream": "launch-gtm",
+      "progress": 30,
+      "progressNote": "Compliance-led launch narrative agreed with the advisory board.",
+      "nextSteps": [
+        { "text": "Localised enablement content — depends on UK path", "done": false }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "lewis"
+    },
+
+    {
+      "id": "r-es-01",
+      "row": "es",
+      "title": "Messaging house localisation",
+      "type": "enablement",
+      "start": "2026-08-20",
+      "end": "2026-09-30",
+      "status": "blocked",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "progress": 0,
+      "progressNote": "Not yet scheduled with the local agency. Blocks the website refresh and the autónomos campaign.",
+      "nextSteps": [
+        { "text": "Book agency slot for localisation sprint", "done": false },
+        { "text": "Confirm reviewer from Spain marketing", "done": false }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "zoraida"
+    },
+    {
+      "id": "r-es-02",
+      "row": "es",
+      "title": "Gestoría partner webinar series",
+      "type": "campaign",
+      "start": "2026-07-20",
+      "end": "2026-12-31",
+      "status": "on-track",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "progress": 35,
+      "progressNote": "Two sessions delivered. Channel sentiment still recovering from the spring pricing change.",
+      "nextSteps": [
+        { "text": "Land channel sentiment recovery plan with sales", "done": false }
+      ],
+      "lastReviewed": "2026-08-01",
+      "reviewedBy": "zoraida"
+    },
+    {
+      "id": "r-es-03",
+      "row": "es",
+      "title": "WiSE launch — Spain wave",
+      "type": "milestone",
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "status": "at-risk",
+      "owner": "zoraida",
+      "workstream": "launch-gtm",
+      "progress": 25,
+      "progressNote": "Launch date holds, but messaging localisation is the critical path.",
+      "nextSteps": [
+        { "text": "Unblock localisation to protect the date", "done": false }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "lewis"
+    },
+    {
+      "id": "r-es-04",
+      "row": "es",
+      "title": "Autónomos campaign",
+      "type": "campaign",
+      "start": "2026-10-15",
+      "end": "2027-01-31",
+      "status": "planned",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "progress": 0,
+      "progressNote": "Advisory board sees autónomos as the fastest entry point if onboarding stays under a day.",
+      "nextSteps": [
+        { "text": "Validate onboarding time claim with product", "done": false }
+      ],
+      "lastReviewed": "2026-06-28",
+      "reviewedBy": "zoraida"
+    },
+    {
+      "id": "r-es-05",
+      "row": "es",
+      "title": "VeriFactu readiness comms",
+      "type": "regulatory",
+      "start": "2026-11-01",
+      "end": "2027-01-31",
+      "status": "planned",
+      "owner": "zoraida",
+      "workstream": "launch-gtm",
+      "progress": 0,
+      "progressNote": "Corporate VeriFactu obligations land January 2027 — comms plan not started.",
+      "nextSteps": [
+        { "text": "Confirm product readiness date with compliance", "done": false }
+      ],
+      "lastReviewed": "2026-08-13",
+      "reviewedBy": "zoraida"
+    },
+
+    {
+      "id": "r-pt-01",
+      "row": "pt",
+      "title": "PT localisation (follows Spain)",
+      "type": "enablement",
+      "start": "2026-09-12",
+      "end": "2026-10-08",
+      "status": "blocked",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "progress": 0,
+      "progressNote": "Cannot start until the Spanish messaging house is complete — single upstream dependency.",
+      "nextSteps": [
+        { "text": "Sequence PT immediately after ES sign-off", "done": false }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "zoraida"
+    },
+    {
+      "id": "r-pt-02",
+      "row": "pt",
+      "title": "Contabilistas partner outreach",
+      "type": "campaign",
+      "start": "2026-09-20",
+      "end": "2026-12-15",
+      "status": "planned",
+      "owner": "zoraida",
+      "workstream": "positioning-enablement",
+      "progress": 0,
+      "progressNote": "Target is two flagship contabilista partnerships signed before launch.",
+      "nextSteps": [
+        { "text": "Shortlist practices with the local sales lead", "done": false }
+      ],
+      "lastReviewed": "2026-07-15",
+      "reviewedBy": "zoraida"
+    },
+    {
+      "id": "r-pt-03",
+      "row": "pt",
+      "title": "WiSE launch — Portugal wave",
+      "type": "milestone",
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "status": "at-risk",
+      "owner": "zoraida",
+      "workstream": "launch-gtm",
+      "progress": 15,
+      "progressNote": "One week behind Spain by design; inherits the Spanish localisation risk.",
+      "nextSteps": [
+        { "text": "Confirm shared asset pack handover from ES", "done": false }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "lewis"
+    },
+    {
+      "id": "r-pt-04",
+      "row": "pt",
+      "title": "SAF-T accounting requirement readiness",
+      "type": "regulatory",
+      "start": "2026-10-01",
+      "end": "2027-01-31",
+      "status": "at-risk",
+      "owner": "zoraida",
+      "workstream": "launch-gtm",
+      "progress": 10,
+      "progressNote": "Full SAF-T accounting requirement lands January 2027; certified-invoicing compliance is our sharpest local differentiator.",
+      "nextSteps": [
+        { "text": "Build compliance proof points with product", "done": false },
+        { "text": "Brief contabilistas ahead of the deadline", "done": false }
+      ],
+      "lastReviewed": "2026-08-13",
+      "reviewedBy": "zoraida"
+    },
+
+    {
+      "id": "r-de-01",
+      "row": "de",
+      "title": "Market entry research programme",
+      "type": "research",
+      "start": "2026-07-01",
+      "end": "2026-11-05",
+      "status": "on-track",
+      "owner": "diego",
+      "workstream": "intel-insights",
+      "progress": 55,
+      "progressNote": "Evidence pack building. Steuerberater channel dynamics are the decisive input.",
+      "nextSteps": [
+        { "text": "Complete competitor deep-dive on the domestic incumbent", "done": false },
+        { "text": "Interview five Steuerberater practices", "done": false }
+      ],
+      "lastReviewed": "2026-08-01",
+      "reviewedBy": "diego"
+    },
+    {
+      "id": "r-de-02",
+      "row": "de",
+      "title": "PMM hire for Germany",
+      "type": "enablement",
+      "start": "2026-08-01",
+      "end": "2026-10-15",
+      "status": "at-risk",
+      "owner": "diego",
+      "workstream": "strategy-alignment",
+      "progress": 20,
+      "progressNote": "No dedicated PMM in market; coverage gap ahead of the entry review.",
+      "nextSteps": [
+        { "text": "Confirm role sign-off with HR", "done": false }
+      ],
+      "lastReviewed": "2026-08-03",
+      "reviewedBy": "diego"
+    },
+    {
+      "id": "r-de-03",
+      "row": "de",
+      "title": "Market entry go/no-go review",
+      "type": "milestone",
+      "start": "2026-11-05",
+      "end": "2026-11-05",
+      "status": "planned",
+      "owner": "diego",
+      "workstream": "strategy-alignment",
+      "progress": 0,
+      "progressNote": "Decision point for German market entry, informed by the research programme.",
+      "nextSteps": [
+        { "text": "Circulate evidence pack one week before review", "done": false }
+      ],
+      "lastReviewed": "2026-06-20",
+      "reviewedBy": "diego"
+    },
+    {
+      "id": "r-de-04",
+      "row": "de",
+      "title": "Steuerberater endorsement strategy",
+      "type": "campaign",
+      "start": "2027-01-15",
+      "end": "2027-06-30",
+      "status": "planned",
+      "owner": "diego",
+      "workstream": "positioning-enablement",
+      "progress": 0,
+      "progressNote": "Advisory counsel is explicit: do not launch without an endorsement strategy in place.",
+      "nextSteps": [
+        { "text": "Only starts on a 'go' at the November review", "done": false }
+      ],
+      "lastReviewed": "2026-06-10",
+      "reviewedBy": "diego"
+    },
+    {
+      "id": "r-de-05",
+      "row": "de",
+      "title": "XRechnung mandate readiness",
+      "type": "regulatory",
+      "start": "2027-06-01",
+      "end": "2027-12-31",
+      "status": "planned",
+      "owner": "diego",
+      "workstream": "launch-gtm",
+      "progress": 0,
+      "progressNote": "German e-invoicing mandate obligations begin January 2028 — readiness window opens mid-FY27.",
+      "nextSteps": [
+        { "text": "Track mandate detail through the intel feed", "done": false }
+      ],
+      "lastReviewed": "2026-08-13",
+      "reviewedBy": "diego"
+    }
+  ]
+}
